@@ -1,0 +1,211 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  background: #1d1e2b;
+  font-family: "Source Sans Pro", sans-serif; }
+
+a {
+  text-decoration: none;
+  color: #fff; }
+
+section {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  color: #eee;
+  padding: 5rem 0; }
+
+section:not(.hero):nth-child(odd) {
+  background: #fff;
+  color: #00b5f0; }
+
+p {
+  text-align: center; }
+
+.brand {
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  margin-left: 4rem; }
+
+.hero {
+  position: relative;
+  justify-content: center;
+  text-align: center;
+  min-height: 100vh;
+  color: #fff; }
+
+.hero .background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  z-index: -1;
+  background-color: #1d1e2b; }
+
+.hero-content {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center; }
+  .hero-content h2, .hero-content h5 {
+    text-shadow: 0 0.1rem 0.1rem #000; }
+  .hero-content h2 {
+    font-size: 4rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem; }
+  .hero-content h5 {
+    font-size: 2rem;
+    margin-bottom: 2.5rem; }
+  .hero-content .btn {
+    padding: 1.25rem 2.875rem; }
+
+.btn {
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 0.3rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  background-color: #6499be;
+  opacity: 1;
+  -webkit-box-shadow: 0 0.1rem 0.1rem 0 rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0 0.1rem 0.1rem 0 rgba(0, 0, 0, 0.75);
+  box-shadow: 0 0.1rem 0.1rem 0 rgba(0, 0, 0, 0.75); }
+
+.btn:hover {
+  opacity: 0.75; }
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 6rem;
+  color: #fff; }
+  header a {
+    opacity: 0.75;
+    color: #fff; }
+  header a:hover {
+    opacity: 1; }
+  header ul {
+    display: flex;
+    list-style: none; }
+  header li {
+    margin: 0 1rem; }
+
+section h2 {
+  font-size: 4rem; }
+
+section p {
+  font-size: 1.6rem;
+  padding: 2rem 2rem 5rem; }
+
+.features {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around; }
+
+.card {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  color: #666;
+  font-size: 1rem; }
+  .card h3 {
+    font-size: 1.33rem;
+    padding: 0 0 1rem; }
+  .card img {
+    height: 15rem;
+    padding: 1rem;
+    border-radius: 10%; }
+
+#info .info-boxes {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around; }
+
+#info .card {
+  color: #fff; }
+  #info .card h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem; }
+  #info .card .fa {
+    font-size: 10rem; }
+  #info .card .fa-mobile {
+    font-size: 15rem;
+    margin-top: -2.2rem; }
+
+.product {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between; }
+  .product img {
+    border-radius: 5%; }
+  .product .product-text {
+    width: 40%;
+    display: flex;
+    flex-direction: column; }
+    .product .product-text h3 {
+      color: #006C90;
+      font-size: 2rem;
+      text-align: center; }
+    .product .product-text p {
+      text-align: left; }
+
+.product-1 .product-text {
+  margin-right: 5rem; }
+
+.product-1 img {
+  margin-left: 5rem; }
+
+.product-2 .product-text {
+  margin-left: 5rem; }
+
+.product-2 img {
+  margin-right: 5rem; }
+
+.product:nth-of-type(2) {
+  margin-top: 10rem; }
+
+.team-boxes {
+  display: flex;
+  justify-content: space-around; }
+  .team-boxes h3 {
+    padding: 2rem 0; }
+  .team-boxes img {
+    padding: 1rem 5rem;
+    border-radius: 50%; }
+
+#contact form input {
+  padding: 1rem;
+  margin-right: 2rem;
+  font-size: 1.125rem;
+  color: #555;
+  flex: 1; }
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #006C90;
+  color: #fff;
+  padding: 1.25rem 0; }
+
+footer ul {
+  list-style: none;
+  display: flex; }
+
+footer ul li {
+  margin-left: 1rem; }
+
+footer p {
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  align-self: center; }
