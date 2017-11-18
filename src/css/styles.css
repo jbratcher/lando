@@ -6,7 +6,8 @@
 
 body {
   background: #1d1e2b;
-  font-family: "Source Sans Pro", sans-serif; }
+  font-family: "Source Sans Pro", sans-serif;
+  overflow-x: hidden; }
 
 a {
   text-decoration: none;
@@ -18,6 +19,11 @@ section {
   align-items: center;
   color: #eee;
   padding: 5rem 0; }
+  section h2 {
+    font-size: 4rem; }
+  section p {
+    font-size: 1.6rem;
+    padding: 2rem 2rem 5rem; }
 
 section:not(.hero):nth-child(odd) {
   background: #fff;
@@ -29,9 +35,12 @@ p {
 .brand {
   text-transform: uppercase;
   font-size: 2.5rem;
-  margin-left: 4rem; }
+  margin-left: 3rem; }
+  .brand a {
+    display: flex; }
 
 .hero {
+  display: flex;
   position: relative;
   justify-content: center;
   text-align: center;
@@ -44,6 +53,7 @@ p {
   left: 0;
   width: 100%;
   height: 100%;
+  background: center center;
   background-size: cover;
   z-index: -1;
   background-color: #1d1e2b; }
@@ -86,7 +96,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 6rem;
+  padding: 1.33rem 2rem;
   color: #fff; }
   header a {
     opacity: 0.75;
@@ -95,18 +105,13 @@ header {
     opacity: 1; }
   header ul {
     display: flex;
-    list-style: none; }
+    list-style: none;
+    margin-right: 3rem; }
   header li {
+    font-size: 1.33rem;
     margin: 0 1rem; }
 
-section h2 {
-  font-size: 4rem; }
-
-section p {
-  font-size: 1.6rem;
-  padding: 2rem 2rem 5rem; }
-
-.features {
+.features, .info-boxes {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around; }
@@ -116,20 +121,18 @@ section p {
   flex-flow: column nowrap;
   align-items: center;
   color: #666;
-  font-size: 1rem; }
+  font-size: 1rem;
+  margin: 0 1rem; }
   .card h3 {
     font-size: 1.33rem;
     padding: 0 0 1rem; }
   .card img {
-    height: 15rem;
+    max-width: 75%;
     padding: 1rem;
     border-radius: 10%; }
 
 #info .info-boxes {
-  width: 100%;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-around; }
+  width: 100vw; }
 
 #info .card {
   color: #fff; }
@@ -149,7 +152,6 @@ section p {
   .product img {
     border-radius: 5%; }
   .product .product-text {
-    width: 40%;
     display: flex;
     flex-direction: column; }
     .product .product-text h3 {
@@ -158,18 +160,6 @@ section p {
       text-align: center; }
     .product .product-text p {
       text-align: left; }
-
-.product-1 .product-text {
-  margin-right: 5rem; }
-
-.product-1 img {
-  margin-left: 5rem; }
-
-.product-2 .product-text {
-  margin-left: 5rem; }
-
-.product-2 img {
-  margin-right: 5rem; }
 
 .product:nth-of-type(2) {
   margin-top: 10rem; }
@@ -180,6 +170,7 @@ section p {
   .team-boxes h3 {
     padding: 2rem 0; }
   .team-boxes img {
+    max-width: 100%;
     padding: 1rem 5rem;
     border-radius: 50%; }
 
@@ -209,3 +200,46 @@ footer p {
   text-transform: uppercase;
   font-size: 0.875rem;
   align-self: center; }
+
+@media (max-width: 60rem) {
+  .features, .info-boxes, .team-boxes {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center; }
+  .card {
+    margin-bottom: 2rem; }
+  .fa-mobile {
+    margin-top: 0; }
+  .product {
+    flex-direction: column;
+    justify-content: center;
+    align-items: space-around; }
+  .product-text {
+    margin: 0; }
+  .product-1 .product-text {
+    order: 0; }
+  .product-1 img {
+    order: 1;
+    margin: 1rem; }
+  .product-1 .product-text {
+    margin-right: 0; }
+  .product-1 img {
+    margin-left: 0; }
+  .product-2 .product-text {
+    margin-left: 0; }
+  .product-2 img {
+    margin-right: 0; }
+  .product {
+    max-width: 80vw;
+    margin: 0 2rem; } }
+
+@media (max-width: 50rem) {
+  header {
+    padding: 1rem 1rem; }
+    header ul {
+      flex-direction: column; }
+  #contact form {
+    display: flex;
+    flex-direction: column; }
+  #contact form input {
+    margin-right: 0; } }
