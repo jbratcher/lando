@@ -152,7 +152,8 @@ header {
   flex-flow: row nowrap;
   justify-content: space-between; }
   .product img {
-    border-radius: 5%; }
+    margin: 1rem;
+    border-radius: 5rem; }
   .product .product-text {
     display: flex;
     flex-direction: column; }
