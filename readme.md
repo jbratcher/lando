@@ -4,6 +4,8 @@ This is the initial commit with most of the content and styling completed.
 
 Next step is media queries to increase repsonsiveness.
 
+<a href="https://jbratcher.github.io/lando/" target="_blank">Demo Page</a>
+
 
 # Change Log
 
