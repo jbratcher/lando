@@ -5,6 +5,8 @@
   box-sizing: border-box; }
 
 body {
+  display: flex;
+  flex-flow: column nowrap;
   background: #1d1e2b;
   font-family: "Source Sans Pro", sans-serif;
   overflow-x: hidden; }

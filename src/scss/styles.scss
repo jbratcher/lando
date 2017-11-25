@@ -16,6 +16,8 @@ $font-serif: 'Source Serif Pro', serif;
 }
 
 body {
+    display: flex;
+    flex-flow: column nowrap;
     background: $bg-color;
     font-family: $font-sans;
     overflow-x: hidden;
