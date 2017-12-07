@@ -1,10 +1,11 @@
 // Variables
 
-$bg-color: #1d1e2b;
+$secondary-color: #1d1e2b;
 $primary-color: #00b5f0;
-$secondary-color: #006C90;
+$tert-color: #006C90;
 $font-sans: 'Source Sans Pro', sans-serif;
 $font-serif: 'Source Serif Pro', serif;
+$header-bg: linear-gradient(to bottom, rgba(76,76,76,1) 0%,rgba(89,89,89,1) 12%,rgba(102,102,102,1) 25%,rgba(71,71,71,1) 39%,rgba(44,44,44,1) 50%,rgba(0,0,0,1) 51%,rgba(17,17,17,1) 60%,rgba(43,43,43,1) 76%,rgba(28,28,28,1) 91%,rgba(19,19,19,1) 100%); 
 
 //Global
 
@@ -16,16 +17,25 @@ $font-serif: 'Source Serif Pro', serif;
 }
 
 body {
-    display: flex;
-    flex-flow: column nowrap;
-    background: $bg-color;
+    background: $secondary-color;
     font-family: $font-sans;
     overflow-x: hidden;
 }
 
 a {
     text-decoration: none;
-    color: #fff;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    opacity: 0.75;
+}
+
+img:hover {
+    opacity: 1;
 }
 
 section {
@@ -33,26 +43,26 @@ section {
     flex-flow: column nowrap;
     align-items: center;
     color: #eee;
-    padding: 5rem 0;
+    padding: 5rem 1rem;
     
     h2 {
+        text-align: center;
         font-size: 4rem;
     }
     
     p {
-      font-size: 1.6rem;
-      padding: 2rem 2rem 5rem;  
+        text-align: center;
+        font-size: 1.6rem;
+        padding: 1rem 3rem 5rem;  
     }
 }
 
 section:not(.hero):nth-child(odd) {
-    background: #fff;
-    color: $primary-color;
+    background: #fefefe;
+    color: $secondary-color;
 }
 
-p {
-    text-align: center;
-}
+
 
 // Classes
 
@@ -117,6 +127,7 @@ p {
     margin: 1rem;
     padding: 1rem;
     border-radius: 0.3rem;
+    color: #fff;
     text-transform: uppercase;
     font-weight: bold;
     text-align: center;
@@ -129,11 +140,13 @@ p {
 
 .btn:hover {
     opacity: 0.75;
+    text-decoration: none;
 }
 
 // Header Section
 
 header {
+    background: $header-bg;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -148,6 +161,7 @@ header {
 
     a:hover {
         opacity: 1;
+        text-decoration: none;
     }
     
     ul {
@@ -164,11 +178,15 @@ header {
 
 // About Section
 
-
 .features, .info-boxes {
+    width: 100vw;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-around;
+}
+
+.features .card {
+    color: $secondary-color;
 }
 
 .card {
@@ -180,14 +198,15 @@ header {
     margin: 0 1rem;
     
     h3 {
+        color: $secondary-color;
         font-size: 1.33rem;
         padding: 0 0 1rem;
     }
     
     img {
-        max-width:75%;
+        width: 100%;
         padding: 1rem;
-        border-radius: 10%;
+        border-radius: 30%;
     }
 }
 
@@ -195,14 +214,11 @@ header {
 
 #info {
     
-    .info-boxes {
-        width: 100vw;
-    }
-    
     .card {
         color: #fff;
         
          h3 {
+            color: #fff;
             font-size: 2rem;
             margin-bottom: 1rem;
         }
@@ -215,12 +231,14 @@ header {
             font-size: 15rem;
             margin-top: -2.2rem;
         }
-
         
+        .fa-forward {
+            margin-left: 2rem;
+        }
+
     }
     
 }
-
 
 // Product Section
 
@@ -262,6 +280,7 @@ header {
     justify-content: space-around;
     
     h3 {
+        color: #fff;
         padding: 2rem 0;
     }
     
@@ -278,10 +297,10 @@ header {
     padding: 1rem;
     margin-right: 2rem;
     font-size: 1.125rem;
+    border-radius: 1rem;
     color: #555;
     flex: 1;
 }
-
 
 //Footer
 
@@ -292,23 +311,36 @@ footer {
     background-color: $secondary-color;
     color: #fff;
     padding: 1.25rem 0;
-
-}
-
-footer ul {
-    list-style: none;
-    display: flex;
     
-}
+    a {
+        color: #fff;
+    }
+    
+    p {
+        text-transform: uppercase;
+        font-size: 0.875rem;
+        align-self: center;
+        padding: 1rem;
+    }
+    
+    p a {
+        color: $primary-color;
+    }
+    
+    ul {
+        display: flex;
+        padding: 1rem;
+        list-style: none;
+    }
+    
+    ul li {
+        margin-left: 1rem;
+    }
+    
+    i.fa:hover {
+        color: $primary-color;
+    }
 
-footer ul li {
-    margin-left: 1rem;
-}
-
-footer p {
-    text-transform: uppercase;
-    font-size: 0.875rem;
-    align-self: center;
 }
 
 // Media Queries
@@ -378,11 +410,18 @@ footer p {
 }
 
 @media (max-width: 50rem) {
+    
     header {
         padding: 1rem 1rem;
-        ul {
-            flex-direction: column;
-        }
+        justify-content: center;
+    }
+    
+    header h1 {
+        display: none;
+    }
+    
+    header ul {
+        
     }
     
     #contact form {
@@ -392,6 +431,13 @@ footer p {
     
     #contact form input {
         margin-right: 0;
+    }
+    
+    section {
+        
+        p {
+            padding: 1rem 2rem 5rem;
+        }
     }
     
 }

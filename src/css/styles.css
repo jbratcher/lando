@@ -5,34 +5,39 @@
   box-sizing: border-box; }
 
 body {
-  display: flex;
-  flex-flow: column nowrap;
   background: #1d1e2b;
   font-family: "Source Sans Pro", sans-serif;
   overflow-x: hidden; }
 
 a {
-  text-decoration: none;
-  color: #fff; }
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: underline; }
+
+img {
+  opacity: 0.75; }
+
+img:hover {
+  opacity: 1; }
 
 section {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
   color: #eee;
-  padding: 5rem 0; }
+  padding: 5rem 1rem; }
   section h2 {
+    text-align: center;
     font-size: 4rem; }
   section p {
+    text-align: center;
     font-size: 1.6rem;
-    padding: 2rem 2rem 5rem; }
+    padding: 1rem 3rem 5rem; }
 
 section:not(.hero):nth-child(odd) {
-  background: #fff;
-  color: #00b5f0; }
-
-p {
-  text-align: center; }
+  background: #fefefe;
+  color: #1d1e2b; }
 
 .brand {
   text-transform: uppercase;
@@ -81,6 +86,7 @@ p {
   margin: 1rem;
   padding: 1rem;
   border-radius: 0.3rem;
+  color: #fff;
   text-transform: uppercase;
   font-weight: bold;
   text-align: center;
@@ -91,9 +97,11 @@ p {
   box-shadow: 0 0.1rem 0.1rem 0 rgba(0, 0, 0, 0.75); }
 
 .btn:hover {
-  opacity: 0.75; }
+  opacity: 0.75;
+  text-decoration: none; }
 
 header {
+  background: linear-gradient(to bottom, #4c4c4c 0%, #595959 12%, #666666 25%, #474747 39%, #2c2c2c 50%, black 51%, #111111 60%, #2b2b2b 76%, #1c1c1c 91%, #131313 100%);
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -104,7 +112,8 @@ header {
     opacity: 0.75;
     color: #fff; }
   header a:hover {
-    opacity: 1; }
+    opacity: 1;
+    text-decoration: none; }
   header ul {
     display: flex;
     list-style: none;
@@ -114,9 +123,13 @@ header {
     margin: 0 1rem; }
 
 .features, .info-boxes {
+  width: 100vw;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around; }
+
+.features .card {
+  color: #1d1e2b; }
 
 .card {
   display: flex;
@@ -126,19 +139,18 @@ header {
   font-size: 1rem;
   margin: 0 1rem; }
   .card h3 {
+    color: #1d1e2b;
     font-size: 1.33rem;
     padding: 0 0 1rem; }
   .card img {
-    max-width: 75%;
+    width: 100%;
     padding: 1rem;
-    border-radius: 10%; }
-
-#info .info-boxes {
-  width: 100vw; }
+    border-radius: 30%; }
 
 #info .card {
   color: #fff; }
   #info .card h3 {
+    color: #fff;
     font-size: 2rem;
     margin-bottom: 1rem; }
   #info .card .fa {
@@ -146,6 +158,8 @@ header {
   #info .card .fa-mobile {
     font-size: 15rem;
     margin-top: -2.2rem; }
+  #info .card .fa-forward {
+    margin-left: 2rem; }
 
 .product {
   display: flex;
@@ -158,7 +172,7 @@ header {
     display: flex;
     flex-direction: column; }
     .product .product-text h3 {
-      color: #006C90;
+      color: #1d1e2b;
       font-size: 2rem;
       text-align: center; }
     .product .product-text p {
@@ -171,6 +185,7 @@ header {
   display: flex;
   justify-content: space-around; }
   .team-boxes h3 {
+    color: #fff;
     padding: 2rem 0; }
   .team-boxes img {
     max-width: 100%;
@@ -181,6 +196,7 @@ header {
   padding: 1rem;
   margin-right: 2rem;
   font-size: 1.125rem;
+  border-radius: 1rem;
   color: #555;
   flex: 1; }
 
@@ -188,21 +204,26 @@ footer {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #006C90;
+  background-color: #1d1e2b;
   color: #fff;
   padding: 1.25rem 0; }
-
-footer ul {
-  list-style: none;
-  display: flex; }
-
-footer ul li {
-  margin-left: 1rem; }
-
-footer p {
-  text-transform: uppercase;
-  font-size: 0.875rem;
-  align-self: center; }
+  footer a {
+    color: #fff; }
+  footer p {
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    align-self: center;
+    padding: 1rem; }
+  footer p a {
+    color: #00b5f0; }
+  footer ul {
+    display: flex;
+    padding: 1rem;
+    list-style: none; }
+  footer ul li {
+    margin-left: 1rem; }
+  footer i.fa:hover {
+    color: #00b5f0; }
 
 @media (max-width: 60rem) {
   .features, .info-boxes, .team-boxes {
@@ -238,11 +259,14 @@ footer p {
 
 @media (max-width: 50rem) {
   header {
-    padding: 1rem 1rem; }
-    header ul {
-      flex-direction: column; }
+    padding: 1rem 1rem;
+    justify-content: center; }
+  header h1 {
+    display: none; }
   #contact form {
     display: flex;
     flex-direction: column; }
   #contact form input {
-    margin-right: 0; } }
+    margin-right: 0; }
+  section p {
+    padding: 1rem 2rem 5rem; } }
