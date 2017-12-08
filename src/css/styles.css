@@ -4,6 +4,9 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
+html {
+  scroll-behavior: smooth; }
+
 body {
   background: #1d1e2b;
   font-family: "Source Sans Pro", sans-serif;
@@ -101,12 +104,13 @@ section:not(.hero):nth-child(odd) {
   text-decoration: none; }
 
 header {
-  background: linear-gradient(to bottom, #4c4c4c 0%, #595959 12%, #666666 25%, #474747 39%, #2c2c2c 50%, black 51%, #111111 60%, #2b2b2b 76%, #1c1c1c 91%, #131313 100%);
+  background: linear-gradient(to bottom, #45484d 0%, black 100%);
+  height: 12vh;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.33rem 2rem;
+  padding: 0 2rem;
   color: #fff; }
   header a {
     opacity: 0.75;
@@ -114,13 +118,20 @@ header {
   header a:hover {
     opacity: 1;
     text-decoration: none; }
+  header nav {
+    height: inherit; }
   header ul {
     display: flex;
     list-style: none;
-    margin-right: 3rem; }
+    margin-right: 3rem;
+    height: inherit; }
   header li {
+    align-self: center;
     font-size: 1.33rem;
-    margin: 0 1rem; }
+    padding: 1.453rem 1rem;
+    border: 0.0625rem solid #333; }
+  header li:hover {
+    background: black; }
 
 .features, .info-boxes {
   width: 100vw;

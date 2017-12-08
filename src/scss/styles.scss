@@ -5,7 +5,7 @@ $primary-color: #00b5f0;
 $tert-color: #006C90;
 $font-sans: 'Source Sans Pro', sans-serif;
 $font-serif: 'Source Serif Pro', serif;
-$header-bg: linear-gradient(to bottom, rgba(76,76,76,1) 0%,rgba(89,89,89,1) 12%,rgba(102,102,102,1) 25%,rgba(71,71,71,1) 39%,rgba(44,44,44,1) 50%,rgba(0,0,0,1) 51%,rgba(17,17,17,1) 60%,rgba(43,43,43,1) 76%,rgba(28,28,28,1) 91%,rgba(19,19,19,1) 100%); 
+$header-bg: linear-gradient(to bottom, rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%);
 
 //Global
 
@@ -14,6 +14,10 @@ $header-bg: linear-gradient(to bottom, rgba(76,76,76,1) 0%,rgba(89,89,89,1) 12%,
     padding: 0;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -147,11 +151,12 @@ section:not(.hero):nth-child(odd) {
 
 header {
     background: $header-bg;
+    height: 12vh;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.33rem 2rem;
+    padding: 0 2rem;
     color: #fff;
     
     a {
@@ -164,15 +169,26 @@ header {
         text-decoration: none;
     }
     
+    nav {
+        height: inherit;
+    }
+    
     ul {
         display: flex;
         list-style: none;
         margin-right: 3rem;
+        height: inherit;
     }
 
     li {
+        align-self: center;
         font-size: 1.33rem;
-        margin: 0 1rem;
+        padding: 1.453rem 1rem;
+        border: 0.0625rem solid #333;
+    }
+    
+    li:hover {
+        background: black;
     }
 }
 
