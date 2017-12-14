@@ -1,7 +1,7 @@
 // Variables
 
-$secondary-color: #1d1e2b;
 $primary-color: #00b5f0;
+$secondary-color: #1d1e2b;
 $tert-color: #006C90;
 $font-sans: 'Source Sans Pro', sans-serif;
 $font-serif: 'Source Serif Pro', serif;
@@ -156,7 +156,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 2rem;
+    padding: 0 0.5rem;
     color: #fff;
     
     a {
@@ -170,26 +170,33 @@ header {
     }
     
     nav {
-        height: inherit;
+        
+        ul {
+            display: flex;
+            list-style: none;
+            margin-right: 3rem;
+            }
+    
+        li {
+            align-self: center;
+            font-size: 1.33rem;
+            padding: 1rem 1rem;
+            border: 0.0625rem solid #333;
+        }
+        
+        li:hover {
+            background: black;
+        }
+        
+        i {
+            color: aqua;
+            opacity: 100;
+        }
+        
+        
     }
     
-    ul {
-        display: flex;
-        list-style: none;
-        margin-right: 3rem;
-        height: inherit;
-    }
-
-    li {
-        align-self: center;
-        font-size: 1.33rem;
-        padding: 1.453rem 1rem;
-        border: 0.0625rem solid #333;
-    }
     
-    li:hover {
-        background: black;
-    }
 }
 
 // About Section
@@ -326,7 +333,7 @@ footer {
     align-items: center;
     background-color: $secondary-color;
     color: #fff;
-    padding: 1.25rem 0;
+    padding: 1.25rem 0.5rem;
     
     a {
         color: #fff;
@@ -358,6 +365,209 @@ footer {
     }
 
 }
+
+// Mobile Menu
+
+    /* Screen reader only */
+    
+    .sr-only {
+        position: absolute;
+        width: 0.625rem;
+        height: 0.625rem;
+        padding: 0;
+        margin: -0.625rem;
+        overflow: hidden;
+        clip: rect(0,0,0,0);
+        border: 0;
+    }
+
+    /* Button styling */
+    
+    .menu-toggle {
+        display: inline-block;
+        padding: .75rem 1rem;
+        line-height: 1rem;
+        font-size: 1rem;
+        color: #fff;
+    }
+    
+    .menu-toggle:hover,
+    .menu-toggle:focus {
+        color: $primary-color;
+    }
+
+    /*
+     Default styles + Mobile first
+     Offscreen menu style
+    */
+    
+    .main-menu {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        overflow-y: scroll;
+        overflow-x: visible;
+        transition: left 0.3s ease,
+        box-shadow 0.3s ease;
+        z-index: 999;
+    }
+    
+    .main-menu ul {
+        list-style: none;
+        margin: 0;
+        padding: 2.5rem 0 0;
+        /* Hide shadow w/ -0.5rem while 'closed' */
+        -webkit-box-shadow: -0.5rem 0 0.5rem rgba(29, 30, 43,.85);
+        -moz-box-shadow: -0.5rem 0 0.5rem rgba(29, 30, 43,.85);
+        box-shadow: -0.5rem 0 0.5rem rgba(29, 30, 43,.85);
+        min-height: 100%;
+        width: 12.5rem;
+        background: $secondary-color;
+    }
+    
+    .main-menu a {
+        display: block;
+        padding: .75rem 1rem;
+        line-height: 1rem;
+        color: #eee;
+        text-decoration: none;
+    }
+    
+    .main-menu a:hover,
+    .main-menu a:focus {
+        background: #000;
+    }
+    
+    .main-menu .menu-close {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    /*
+     On small devices, allow it to toggle...
+    */
+    /*
+     :target for non-JavaScript
+     aria-expanded="true/false" will be for JavaScript
+    */
+    
+    .main-menu:target,
+    .main-menu[aria-expanded="true"] {
+      right: 0;
+      outline: none;
+      -moz-box-shadow: 0.1875rem 0 0.75rem rgba(29, 30, 43,.85);
+      -webkit-box-shadow: 0.1875rem 0 0.75rem rgba(29, 30, 43,.85);
+      box-shadow: 0.1875rem 0 0.75rem rgba(29, 30, 43,.85);
+    }
+
+    .main-menu:target .menu-close,
+    .main-menu[aria-expanded="true"] .menu-close {
+      z-index: 1001;
+    }
+
+    .main-menu:target ul,
+    .main-menu[aria-expanded="true"] ul {
+      position: relative;
+      z-index: 1000;
+    }
+
+    /* 
+     We could use `.main-menu:target:after`, but
+     it wouldn't be clickable.
+    */
+    
+    .main-menu:target + .backdrop,
+    .main-menu[aria-expanded="true"] + .backdrop {
+      position: absolute;
+      display: block;  
+      content: "";
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 998;
+      background: $tert-color;
+      background: rgba(29, 30, 43,.85);
+      cursor: default;
+    }
+
+    @supports (position: fixed) {
+        .main-menu,
+        .main-menu:target + .backdrop,
+        .main-menu[aria-expanded="true"] + .backdrop {
+            position: fixed;
+      }
+    }
+
+    /*
+     Larger screen styling
+     Horizontal menu
+    */
+
+    @media (min-width: 50rem) {
+        .menu-toggle,
+        .main-menu .menu-close {
+          display: none;
+        }
+  
+        /* Undo positioning of off-canvas menu */
+      
+        .main-menu {
+            position: relative;
+            right: auto;
+            top: auto;
+            height: auto;
+        }
+      
+        .main-menu ul {
+    
+            /* Undo off-canvas styling */
+            
+            padding: 0;
+            -webkit-box-shadow: none;
+               -moz-box-shadow: none;
+                    box-shadow: none;
+            height: auto;
+            width: auto;
+            background: none;
+        }
+  
+        .main-menu a {
+            color: #fff;
+            border: 0 !important; /* Remove borders from off-canvas styling */
+        }
+  
+        .main-menu a:hover,
+        .main-menu a:focus {
+            background: none; /* Remove background from off-canvas styling */
+            color: $primary-color;
+          }
+          
+    }
+    
+    @media (max-width: 50rem) {
+            
+        .main-menu {
+            right: -12.5rem;
+        }    
+    
+        .main-menu ul {
+            flex-direction: column;
+            top: 4.5rem;
+            
+            li {
+                border: none;
+                width: 100%;
+            }
+        }
+                
+    }
+
+
+
+
 
 // Media Queries
 
@@ -430,14 +640,10 @@ footer {
     header {
         padding: 1rem 1rem;
         justify-content: center;
-    }
-    
-    header h1 {
-        display: none;
-    }
-    
-    header ul {
         
+        h1 {
+        display: none;
+        }
     }
     
     #contact form {
@@ -457,6 +663,7 @@ footer {
     }
     
 }
+    
 
 
 
