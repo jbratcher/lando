@@ -46,8 +46,6 @@ section:not(.hero):nth-child(odd) {
   text-transform: uppercase;
   font-size: 2.5rem;
   margin-left: 3rem; }
-  .brand a {
-    display: flex; }
 
 .hero {
   display: flex;
@@ -66,7 +64,8 @@ section:not(.hero):nth-child(odd) {
   background: center center;
   background-size: cover;
   z-index: -1;
-  background-color: #1d1e2b; }
+  background-color: #1d1e2b;
+  opacity: 1; }
 
 .hero-content {
   display: flex;
@@ -130,8 +129,8 @@ header {
   header nav li:hover {
     background: black; }
   header nav i {
-    color: aqua;
-    opacity: 100; }
+    color: #00b5f0;
+    opacity: 1; }
 
 .features, .info-boxes {
   width: 100vw;
@@ -166,6 +165,8 @@ header {
     margin-bottom: 1rem; }
   #info .card .fa {
     font-size: 10rem; }
+  #info .card .fa:hover {
+    color: #00b5f0; }
   #info .card .fa-mobile {
     font-size: 15rem;
     margin-top: -2.2rem; }
@@ -236,7 +237,6 @@ footer {
   footer i.fa:hover {
     color: #00b5f0; }
 
-/* Screen reader only */
 .sr-only {
   position: absolute;
   width: 0.625rem;
@@ -247,7 +247,6 @@ footer {
   clip: rect(0, 0, 0, 0);
   border: 0; }
 
-/* Button styling */
 .menu-toggle {
   display: inline-block;
   padding: .75rem 1rem;
@@ -259,10 +258,6 @@ footer {
 .menu-toggle:focus {
   color: #00b5f0; }
 
-/*
-     Default styles + Mobile first
-     Offscreen menu style
-    */
 .main-menu {
   position: absolute;
   right: 0;
@@ -294,20 +289,18 @@ footer {
 
 .main-menu a:hover,
 .main-menu a:focus {
-  background: #000; }
+  background: #000;
+  color: #00b5f0; }
+
+a#main-menu-toggle {
+  margin-left: 90%; }
 
 .main-menu .menu-close {
   position: absolute;
-  right: 0;
-  top: 0; }
+  right: 1.5rem;
+  top: 0.5rem;
+  background: #1d1e2b; }
 
-/*
-     On small devices, allow it to toggle...
-    */
-/*
-     :target for non-JavaScript
-     aria-expanded="true/false" will be for JavaScript
-    */
 .main-menu:target,
 .main-menu[aria-expanded="true"] {
   right: 0;
@@ -325,10 +318,6 @@ footer {
   position: relative;
   z-index: 1000; }
 
-/* 
-     We could use `.main-menu:target:after`, but
-     it wouldn't be clickable.
-    */
 .main-menu:target + .backdrop,
 .main-menu[aria-expanded="true"] + .backdrop {
   position: absolute;
@@ -339,7 +328,7 @@ footer {
   width: 100%;
   height: 100%;
   z-index: 998;
-  background: #006C90;
+  background: #1d1e2b;
   background: rgba(29, 30, 43, 0.85);
   cursor: default; }
 
@@ -349,22 +338,16 @@ footer {
   .main-menu[aria-expanded="true"] + .backdrop {
     position: fixed; } }
 
-/*
-     Larger screen styling
-     Horizontal menu
-    */
 @media (min-width: 50rem) {
   .menu-toggle,
   .main-menu .menu-close {
     display: none; }
-  /* Undo positioning of off-canvas menu */
   .main-menu {
     position: relative;
     right: auto;
     top: auto;
     height: auto; }
   .main-menu ul {
-    /* Undo off-canvas styling */
     padding: 0;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
