@@ -2,28 +2,28 @@
 
 Lando is a multipurpose landing page template made with pure HTML and CSS.
 
-This is the initial commit with most of the content and styling completed. 
+Lando offers a lot of punch using only HTML and CSS.
 
-Next step is media queries to increase repsonsiveness.
+* Fully repsonsive design
+* Lots of psuedo-class effects
+* Javascript optional
+
+### Dependencies
+
+* Font-Awesome v4.x
+* Google Fonts Source Sans and Serif
+
+### Github Pages
 
 <a href="https://jbratcher.github.io/lando/">Live Demo</a>
 
 # Change Log
 
-v1.1
+v1.5
 
-* Added more placeholder images
-
-
-v1.2 
-
-* Added media queries and refactored css
-
-v1.3
-
-* Updated gulpfile.js to remove bootstrap js files
-* Changed http to https links in index.html
-* fixed some styling issues
+* Updated relative links
+* Mobile Menu
+* Added more hover effects with opacity and color
 
 v1.4
 
@@ -31,5 +31,19 @@ v1.4
 * Header Gradient
 * Smooth Scrolling
 * Fixed mobile css styles
+
+v1.3
+
+* Updated gulpfile.js to remove bootstrap js files
+* Changed http to https links in index.html
+* fixed some styling issues
+
+v1.2 
+
+* Added media queries and refactored css
+
+v1.1
+
+* Added more placeholder images
 
 

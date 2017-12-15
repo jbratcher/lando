@@ -531,12 +531,12 @@ footer {
   
         .main-menu a {
             color: #fff;
-            border: 0 !important; /* Remove borders from off-canvas styling */
+            border: 0 !important; // Remove borders from off-canvas styling
         }
   
         .main-menu a:hover,
         .main-menu a:focus {
-            background: none; /* Remove background from off-canvas styling */
+            background: none; // Remove background from off-canvas styling
             color: $primary-color;
           }
           
@@ -559,10 +559,6 @@ footer {
         }
                 
     }
-
-
-
-
 
 // Media Queries
 
