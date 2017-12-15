@@ -21,7 +21,7 @@ Lando offers a lot of punch using only HTML and CSS.
 
 v1.5
 
-* Updated relative links
+* Updated relative links for css and hero image
 * Mobile Menu
 * Added more hover effects with opacity and color
 
