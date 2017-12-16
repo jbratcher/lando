@@ -8,7 +8,6 @@ html {
   scroll-behavior: smooth; }
 
 body {
-  background: #1d1e2b;
   font-family: "Source Sans Pro", sans-serif;
   overflow-x: hidden; }
 
@@ -44,10 +43,64 @@ section:not(.hero):nth-child(odd) {
   background: #fefefe;
   color: #1d1e2b; }
 
+section:not(.hero):nth-child(even) {
+  background: #1d1e2b;
+  color: #fefefe; }
+
 .brand {
   text-transform: uppercase;
   font-size: 2.5rem;
   margin-left: 3rem; }
+
+button {
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 0.3rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  background: linear-gradient(to bottom, #499bea 0%, #207ce5 100%);
+  opacity: 1;
+  transition: all 0.3s ease-out; }
+  button a {
+    color: #fff; }
+
+button:hover {
+  opacity: 0.75; }
+  button:hover a {
+    text-decoration: none; }
+
+header {
+  background: linear-gradient(to bottom, #45484d 0%, black 100%);
+  height: 12vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.5rem;
+  color: #fff; }
+  header a {
+    opacity: 0.75;
+    color: #fff;
+    transition: all 0.3s ease-out; }
+  header a:hover {
+    opacity: 1;
+    text-decoration: none; }
+  header nav ul {
+    display: flex;
+    list-style: none;
+    margin-right: 3rem; }
+  header nav li {
+    align-self: center;
+    font-size: 1.33rem;
+    padding: 1rem 1rem;
+    border: 0.0625rem solid #333;
+    transition: all 0.3s ease-out; }
+  header nav li:hover {
+    background: black; }
+  header nav i {
+    color: #00b5f0;
+    opacity: 1; }
 
 .hero {
   display: flex;
@@ -83,59 +136,8 @@ section:not(.hero):nth-child(odd) {
   .hero-content h5 {
     font-size: 2rem;
     margin-bottom: 2.5rem; }
-  .hero-content .btn {
+  .hero-content button {
     padding: 1.25rem 2.875rem; }
-
-.btn {
-  margin: 1rem;
-  padding: 1rem;
-  border-radius: 0.3rem;
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: bold;
-  text-align: center;
-  background-color: #6499be;
-  opacity: 1;
-  -webkit-box-shadow: 0 0.1rem 0.1rem 0 rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0 0.1rem 0.1rem 0 rgba(0, 0, 0, 0.75);
-  box-shadow: 0 0.1rem 0.1rem 0 rgba(0, 0, 0, 0.75);
-  transition: all 0.3s ease-out; }
-
-.btn:hover {
-  opacity: 0.75;
-  text-decoration: none; }
-
-header {
-  background: linear-gradient(to bottom, #45484d 0%, black 100%);
-  height: 12vh;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 0.5rem;
-  color: #fff; }
-  header a {
-    opacity: 0.75;
-    color: #fff;
-    transition: all 0.3s ease-out; }
-  header a:hover {
-    opacity: 1;
-    text-decoration: none; }
-  header nav ul {
-    display: flex;
-    list-style: none;
-    margin-right: 3rem; }
-  header nav li {
-    align-self: center;
-    font-size: 1.33rem;
-    padding: 1rem 1rem;
-    border: 0.0625rem solid #333;
-    transition: all 0.3s ease-out; }
-  header nav li:hover {
-    background: black; }
-  header nav i {
-    color: #00b5f0;
-    opacity: 1; }
 
 .features, .info-boxes {
   width: 100vw;
@@ -160,7 +162,10 @@ header {
   .card img {
     width: 100%;
     padding: 1rem;
-    border-radius: 30%; }
+    border-radius: 30%;
+    transition: all 1s ease-out; }
+  .card img:hover {
+    transform: scale(1.2); }
 
 #info .card {
   color: #fff; }
@@ -172,7 +177,8 @@ header {
     font-size: 10rem;
     transition: all 0.3s ease-out; }
   #info .card .fa:hover {
-    color: #00b5f0; }
+    color: #00b5f0;
+    transform: scale(1.2); }
   #info .card .fa-mobile {
     font-size: 15rem;
     margin-top: -2.2rem; }
@@ -184,7 +190,7 @@ header {
   flex-flow: row nowrap;
   justify-content: space-between; }
   .product img {
-    margin: 1rem;
+    margin: 1rem 2rem;
     border-radius: 5rem; }
   .product .product-text {
     display: flex;
@@ -201,6 +207,7 @@ header {
 
 .team-boxes {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around; }
   .team-boxes h3 {
     color: #fff;
@@ -241,8 +248,9 @@ footer {
   footer ul li {
     margin-left: 1rem;
     transition: all 0.3s ease-out; }
-  footer i.fa:hover {
-    color: #00b5f0; }
+    footer ul li i.fa:hover {
+      color: #00b5f0;
+      transform: rotate(30deg); }
 
 .sr-only {
   position: absolute;

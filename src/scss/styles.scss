@@ -6,6 +6,7 @@ $tert-color: #006C90;
 $font-sans: 'Source Sans Pro', sans-serif;
 $font-serif: 'Source Serif Pro', serif;
 $header-bg: linear-gradient(to bottom, rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%);
+$button-bg: linear-gradient(to bottom, rgba(73,155,234,1) 0%,rgba(32,124,229,1) 100%); 
 
 //Global
 
@@ -21,7 +22,6 @@ html {
 }
 
 body {
-    background: $secondary-color;
     font-family: $font-sans;
     overflow-x: hidden;
 }
@@ -68,6 +68,11 @@ section:not(.hero):nth-child(odd) {
     color: $secondary-color;
 }
 
+section:not(.hero):nth-child(even) {
+    background: $secondary-color;
+    color: #fefefe;
+}
+
 // Classes
 
 .brand {
@@ -76,73 +81,28 @@ section:not(.hero):nth-child(odd) {
     margin-left: 3rem;
 }
 
-.hero {
-    display: flex;
-    position: relative;
-    justify-content: center;
-    text-align: center;
-    min-height: 100vh;
-    color: #fff;
-}
-
-.hero .background-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: center center;
-    background-size: cover;
-    z-index: -1;
-    background-color: #1d1e2b;
-    opacity: 1;
-}
-
-.hero-content {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    
-    h2, h5 {
-        text-shadow: 0 0.1rem 0.1rem #000;
-    }
-    
-    h2 {
-        font-size: 4rem;
-        text-transform: uppercase;
-        margin-bottom: 1rem
-    }
-    
-    h5 {
-        font-size: 2rem;
-        margin-bottom: 2.5rem;
-    }
-    .btn {
-        padding: 1.25rem 2.875rem;
-    }
-}
-
-
-.btn {
+button {
     margin: 1rem;
     padding: 1rem;
     border-radius: 0.3rem;
-    color: #fff;
     text-transform: uppercase;
     font-weight: bold;
     text-align: center;
-    background-color: #6499be;
+    background: $button-bg;
     opacity: 1;
-    -webkit-box-shadow: 0 0.1rem 0.1rem 0 rgba(0,0,0,0.75);
-    -moz-box-shadow: 0 0.1rem 0.1rem 0 rgba(0,0,0,0.75);
-    box-shadow: 0 0.1rem 0.1rem 0 rgba(0,0,0,0.75);
     transition: all 0.3s ease-out;
+    
+    a {
+        color: #fff;
+    }
 }
 
-.btn:hover {
+button:hover {
     opacity: 0.75;
-    text-decoration: none;
+    
+    a {
+        text-decoration: none;
+    }
 }
 
 // Header Section
@@ -199,6 +159,56 @@ header {
     
 }
 
+// Hero Section
+
+.hero {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    min-height: 100vh;
+    color: #fff;
+}
+
+.hero .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: center center;
+    background-size: cover;
+    z-index: -1;
+    background-color: $secondary-color;
+    opacity: 1;
+}
+
+.hero-content {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    
+    h2, h5 {
+        text-shadow: 0 0.1rem 0.1rem #000;
+    }
+    
+    h2 {
+        font-size: 4rem;
+        text-transform: uppercase;
+        margin-bottom: 1rem
+    }
+    
+    h5 {
+        font-size: 2rem;
+        margin-bottom: 2.5rem;
+    }
+    
+    button {
+        padding: 1.25rem 2.875rem;
+    }
+}
+
 // About Section
 
 .features, .info-boxes {
@@ -230,6 +240,11 @@ header {
         width: 100%;
         padding: 1rem;
         border-radius: 30%;
+        transition: all 1s ease-out;
+    }
+    
+    img:hover {
+        transform: scale(1.2);
     }
 }
 
@@ -253,6 +268,7 @@ header {
         
         .fa:hover {
             color: $primary-color;
+            transform: scale(1.2);
         }
         
         .fa-mobile {
@@ -276,7 +292,7 @@ header {
     justify-content: space-between;
     
     img {
-        margin: 1rem;
+        margin: 1rem 2rem;
         border-radius: 5rem;
     }
     
@@ -305,6 +321,7 @@ header {
 
 .team-boxes {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     
     h3 {
@@ -364,10 +381,11 @@ footer {
     ul li {
         margin-left: 1rem;
         transition: all 0.3s ease-out;
-    }
-    
-    i.fa:hover {
-        color: $primary-color;
+        
+        i.fa:hover {
+            color: $primary-color;
+            transform: rotate(30deg);
+        }
     }
 
 }
