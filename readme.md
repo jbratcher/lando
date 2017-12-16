@@ -24,6 +24,8 @@ v1.5
 * Updated relative links for css and hero image
 * Mobile Menu
 * Added more hover effects with opacity and color
+* Changed a.btn to button for better semantics
+* Added transforms for more animations
 
 v1.4
 

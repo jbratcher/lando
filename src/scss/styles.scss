@@ -240,7 +240,7 @@ header {
         width: 100%;
         padding: 1rem;
         border-radius: 30%;
-        transition: all 1s ease-out;
+        transition: all 0.8s ease-out;
     }
     
     img:hover {
@@ -380,7 +380,10 @@ footer {
     
     ul li {
         margin-left: 1rem;
-        transition: all 0.3s ease-out;
+        
+        i.fa {
+            transition: all 0.8s ease-out;
+        }
         
         i.fa:hover {
             color: $primary-color;

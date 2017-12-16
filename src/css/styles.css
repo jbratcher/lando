@@ -163,7 +163,7 @@ header {
     width: 100%;
     padding: 1rem;
     border-radius: 30%;
-    transition: all 1s ease-out; }
+    transition: all 0.8s ease-out; }
   .card img:hover {
     transform: scale(1.2); }
 
@@ -246,8 +246,9 @@ footer {
     padding: 1rem;
     list-style: none; }
   footer ul li {
-    margin-left: 1rem;
-    transition: all 0.3s ease-out; }
+    margin-left: 1rem; }
+    footer ul li i.fa {
+      transition: all 0.8s ease-out; }
     footer ul li i.fa:hover {
       color: #00b5f0;
       transform: rotate(30deg); }
