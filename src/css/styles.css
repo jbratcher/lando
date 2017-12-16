@@ -13,13 +13,15 @@ body {
   overflow-x: hidden; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  transition: all 0.3s ease-out; }
 
 a:hover {
   text-decoration: underline; }
 
 img {
-  opacity: 0.75; }
+  opacity: 0.75;
+  transition: all 0.3s ease-out; }
 
 img:hover {
   opacity: 1; }
@@ -96,7 +98,8 @@ section:not(.hero):nth-child(odd) {
   opacity: 1;
   -webkit-box-shadow: 0 0.1rem 0.1rem 0 rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0 0.1rem 0.1rem 0 rgba(0, 0, 0, 0.75);
-  box-shadow: 0 0.1rem 0.1rem 0 rgba(0, 0, 0, 0.75); }
+  box-shadow: 0 0.1rem 0.1rem 0 rgba(0, 0, 0, 0.75);
+  transition: all 0.3s ease-out; }
 
 .btn:hover {
   opacity: 0.75;
@@ -113,7 +116,8 @@ header {
   color: #fff; }
   header a {
     opacity: 0.75;
-    color: #fff; }
+    color: #fff;
+    transition: all 0.3s ease-out; }
   header a:hover {
     opacity: 1;
     text-decoration: none; }
@@ -125,7 +129,8 @@ header {
     align-self: center;
     font-size: 1.33rem;
     padding: 1rem 1rem;
-    border: 0.0625rem solid #333; }
+    border: 0.0625rem solid #333;
+    transition: all 0.3s ease-out; }
   header nav li:hover {
     background: black; }
   header nav i {
@@ -164,7 +169,8 @@ header {
     font-size: 2rem;
     margin-bottom: 1rem; }
   #info .card .fa {
-    font-size: 10rem; }
+    font-size: 10rem;
+    transition: all 0.3s ease-out; }
   #info .card .fa:hover {
     color: #00b5f0; }
   #info .card .fa-mobile {
@@ -233,7 +239,8 @@ footer {
     padding: 1rem;
     list-style: none; }
   footer ul li {
-    margin-left: 1rem; }
+    margin-left: 1rem;
+    transition: all 0.3s ease-out; }
   footer i.fa:hover {
     color: #00b5f0; }
 
@@ -252,7 +259,8 @@ footer {
   padding: .75rem 1rem;
   line-height: 1rem;
   font-size: 1rem;
-  color: #fff; }
+  color: #fff;
+  transition: all 0.3s ease-out; }
 
 .menu-toggle:hover,
 .menu-toggle:focus {
@@ -285,7 +293,8 @@ footer {
   padding: .75rem 1rem;
   line-height: 1rem;
   color: #eee;
-  text-decoration: none; }
+  text-decoration: none;
+  transition: all 0.3s ease-out; }
 
 .main-menu a:hover,
 .main-menu a:focus {
@@ -358,11 +367,10 @@ a#main-menu-toggle {
   .main-menu a {
     color: #fff;
     border: 0 !important;
-    /* Remove borders from off-canvas styling */ }
+    transition: all 0.3s ease-out; }
   .main-menu a:hover,
   .main-menu a:focus {
     background: none;
-    /* Remove background from off-canvas styling */
     color: #00b5f0; } }
 
 @media (max-width: 50rem) {

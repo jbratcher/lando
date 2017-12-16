@@ -28,6 +28,7 @@ body {
 
 a {
     text-decoration: none;
+    transition: all 0.3s ease-out;
 }
 
 a:hover {
@@ -36,6 +37,7 @@ a:hover {
 
 img {
     opacity: 0.75;
+    transition: all 0.3s ease-out;
 }
 
 img:hover {
@@ -135,6 +137,7 @@ section:not(.hero):nth-child(odd) {
     -webkit-box-shadow: 0 0.1rem 0.1rem 0 rgba(0,0,0,0.75);
     -moz-box-shadow: 0 0.1rem 0.1rem 0 rgba(0,0,0,0.75);
     box-shadow: 0 0.1rem 0.1rem 0 rgba(0,0,0,0.75);
+    transition: all 0.3s ease-out;
 }
 
 .btn:hover {
@@ -157,11 +160,12 @@ header {
     a {
         opacity: 0.75;
         color: #fff;
+        transition: all 0.3s ease-out;
     }
 
     a:hover {
         opacity: 1;
-        text-decoration: none;  //prevent text decoration on brand (bug?)
+        text-decoration: none;
     }
     
     nav {
@@ -177,6 +181,7 @@ header {
             font-size: 1.33rem;
             padding: 1rem 1rem;
             border: 0.0625rem solid #333;
+            transition: all 0.3s ease-out;
         }
         
         li:hover {
@@ -243,6 +248,7 @@ header {
     
         .fa {
             font-size: 10rem;
+            transition: all 0.3s ease-out;
         }
         
         .fa:hover {
@@ -357,6 +363,7 @@ footer {
     
     ul li {
         margin-left: 1rem;
+        transition: all 0.3s ease-out;
     }
     
     i.fa:hover {
@@ -388,6 +395,7 @@ footer {
         line-height: 1rem;
         font-size: 1rem;
         color: #fff;
+        transition: all 0.3s ease-out;
     }
     
     .menu-toggle:hover,
@@ -429,6 +437,7 @@ footer {
         line-height: 1rem;
         color: #eee;
         text-decoration: none;
+        transition: all 0.3s ease-out;
     }
     
     .main-menu a:hover,
@@ -532,6 +541,7 @@ footer {
         .main-menu a {
             color: #fff;
             border: 0 !important; // Remove borders from off-canvas styling
+            transition: all 0.3s ease-out;
         }
   
         .main-menu a:hover,
