@@ -258,10 +258,12 @@ footer {
   footer ul li {
     margin-left: 1rem; }
     footer ul li i.fa {
-      transition: all 0.8s ease-out; }
+      position: relative;
+      top: 0.2rem;
+      transition: all 0.5s linear; }
     footer ul li i.fa:hover {
-      color: #00b5f0;
-      transform: rotate(30deg); }
+      top: 0;
+      color: #00b5f0; }
 
 @media (max-width: 60rem) {
   header {

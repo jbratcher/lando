@@ -397,12 +397,14 @@ footer {
         margin-left: 1rem;
         
         i.fa {
-            transition: all 0.8s ease-out;
+            position: relative;
+            top: 0.2rem;
+            transition: all 0.5s linear;
         }
         
         i.fa:hover {
+            top: 0;
             color: $primary-color;
-            transform: rotate(30deg);
         }
     }
 
