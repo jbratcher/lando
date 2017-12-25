@@ -52,7 +52,7 @@ button {
   top: 0;
   margin: 1rem;
   padding: 1rem;
-  border-radius: 0.3rem;
+  border-radius: 1rem;
   text-transform: uppercase;
   font-weight: bold;
   text-align: center;
@@ -94,7 +94,7 @@ header {
       transition: all 0.3s ease-in-out; }
       header nav ul li a {
         font-size: 1.33rem;
-        padding: 2rem;
+        padding: 1.25rem;
         display: block; }
     header nav ul li:hover {
       background: linear-gradient(to bottom, #272a2f 0%, black 100%);
@@ -234,6 +234,11 @@ header {
   border-radius: 1rem;
   color: #555;
   flex: 1; }
+
+#contact form button:hover {
+  webkit-box-shadow: 0 0 8px #303;
+  -moz-box-shadow: 0 0 4px #303;
+  box-shadow: 0 0.5rem 0.5rem #303; }
 
 footer {
   display: flex;

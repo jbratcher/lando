@@ -6,6 +6,7 @@ $tert-color: #006C90;
 $font-sans: 'Source Sans Pro', sans-serif;
 $font-serif: 'Source Serif Pro', serif;
 $header-bg: linear-gradient(to bottom, rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%);
+$link-bg: linear-gradient(to bottom, rgba(39,42,47,1) 0%,rgba(0,0,0,1) 100%);
 $button-bg: linear-gradient(to bottom, rgba(73,155,234,1) 0%,rgba(32,124,229,1) 100%); 
 
 //Global
@@ -119,6 +120,7 @@ header {
     }
 
     a:hover {
+        color: $primary-color;
         opacity: 1;
         text-decoration: none;
     }
@@ -128,24 +130,30 @@ header {
         ul {
             display: flex;
             list-style: none;
+            
+            li {
+                align-self: center;
+                border: 0.0625rem solid #333;
+                border-top: none;
+                border-bottom: none;
+                transition: all 0.3s ease-in-out;
+                
+                a {
+                    font-size: 1.33rem;
+                    padding: 2rem;
+                    display: block;
+                }
+            }
+            
+            li:hover {
+                background: $link-bg;
+                border: 0.0625rem solid $primary-color;
+                border-top: none;
+                border-bottom: none;
+            }
+            
         }
     
-        li {
-            align-self: center;
-            font-size: 1.33rem;
-            padding: 1rem 1rem;
-            border: 0.0625rem solid #333;
-            transition: all 0.3s ease-in-out;
-        }
-        
-        li:hover {
-            cursor: pointer;
-            background: black;
-        }
-        
-        li a {
-             display: block;
-        }
         
         i {
             color: $primary-color;
@@ -389,12 +397,14 @@ footer {
         margin-left: 1rem;
         
         i.fa {
-            transition: all 0.8s ease-out;
+            position: relative;
+            top: 0.2rem;
+            transition: all 0.5s linear;
         }
         
         i.fa:hover {
+            top: 0;
             color: $primary-color;
-            transform: rotate(30deg);
         }
     }
 
@@ -404,18 +414,22 @@ footer {
 
 @media (max-width: 60rem) {
     
-    section {
-        
-        p {
-            padding: 1rem 2rem 5rem;
-        }
-    }
-    
     header {
         justify-content: center;
         
         h1 {
             display: none;
+        }
+    }
+    
+}
+
+@media (max-width: 45rem) {
+    
+    section {
+        
+        p {
+            padding: 1rem 2rem 5rem;
         }
     }
     
@@ -446,6 +460,8 @@ footer {
         flex-direction: column;
         justify-content: center;
         align-items: space-around;
+        max-width: 80vw;
+        margin: 0 2rem;
     }
     
     .product-text {
@@ -461,34 +477,6 @@ footer {
         margin: 1rem;
     }
     
-    .product-1 {
-    
-        .product-text {
-            margin-right: 0;
-        }
-        
-        img {
-            margin-left: 0;
-        }
-        
-    }
-
-    .product-2 {
-        
-        .product-text {
-            margin-left: 0;
-        }
-        
-        img {
-            margin-right: 0;
-        }
-        
-    }
-    
-    .product {
-        max-width: 80vw;
-        margin: 0 2rem;
-    }
 }
 
 // Mobile Menu
@@ -510,9 +498,9 @@ footer {
     
     .menu-toggle {
         display: inline-block;
-        padding: .75rem 1rem;
+        padding: 2rem 0;
         line-height: 1rem;
-        font-size: 1rem;
+        font-size: 1.33rem;
         color: #fff;
         transition: all 0.3s ease-out;
     }
@@ -540,7 +528,6 @@ footer {
     .main-menu ul {
         list-style: none;
         margin: 0;
-        padding: 2.5rem 0 0;
         /* Hide shadow w/ -0.5rem while 'closed' */
         -webkit-box-shadow: -0.5rem 0 0.5rem rgba(29, 30, 43,.85);
         -moz-box-shadow: -0.5rem 0 0.5rem rgba(29, 30, 43,.85);
@@ -548,21 +535,19 @@ footer {
         min-height: 100%;
         width: 12.5rem;
         background: $secondary-color;
-    }
-    
-    .main-menu a {
-        display: block;
-        padding: .75rem 1rem;
-        line-height: 1rem;
-        color: #eee;
-        text-decoration: none;
-        transition: all 0.3s ease-out;
-    }
-    
-    .main-menu a:hover,
-    .main-menu a:focus {
-        background: #000;
-        color: $primary-color;
+        
+        li {
+            border: 0.0625rem solid #333;
+            border-top: none;
+            border-bottom: none;
+            transition: all 0.3s ease-in-out; 
+        }
+        
+        li:hover {
+            border: 0.0625rem solid $primary-color;
+            border-top: none;
+            border-bottom: none;
+        }
     }
     
     a#main-menu-toggle {
@@ -571,15 +556,20 @@ footer {
     
     .main-menu .menu-close {
         position: absolute;
-        right: 1.5rem;
-        top: 0.5rem;
+        font-size: 2rem;
+        top: 1.5rem;
+        right: 30%;
         background: $secondary-color;
+    }
+    
+    .main-menu .menu-close a {
+        padding: 0;
     }
 
     
     // On small devices, allow it to toggle
     
-    // :target for non-JavaScript aria-expanded="true/false" will be fiorJavaScript
+    // :target for non-JavaScript aria-expanded="true/false" will be for JavaScript
     
     .main-menu:target,
     .main-menu[aria-expanded="true"] {
@@ -601,35 +591,10 @@ footer {
       z-index: 1000;
     }
 
-    // We could use `.main-menu:target:after`, but it wouldn't be clickable
-    
-    .main-menu:target + .backdrop,
-    .main-menu[aria-expanded="true"] + .backdrop {
-      position: absolute;
-      display: block;  
-      content: "";
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 998;
-      background: $secondary-color;
-      background: rgba(29, 30, 43,.85);
-      cursor: default;
-    }
-
-    @supports (position: fixed) {
-        .main-menu,
-        .main-menu:target + .backdrop,
-        .main-menu[aria-expanded="true"] + .backdrop {
-            position: fixed;
-      }
-    }
-
     // Larger screen styling
     // Horizontal menu
 
-    @media (min-width: 50rem) {
+    @media (min-width: 45rem) {
         .menu-toggle,
         .main-menu .menu-close {
           display: none;
@@ -671,7 +636,7 @@ footer {
           
     }
     
-    @media (max-width: 50rem) {
+    @media (max-width: 45rem) {
             
         .main-menu {
             right: -12.5rem;
@@ -679,10 +644,9 @@ footer {
     
         .main-menu ul {
             flex-direction: column;
-            top: 4.5rem;
+            top: 6.5rem;
             
             li {
-                border: none;
                 width: 100%;
             }
         }
