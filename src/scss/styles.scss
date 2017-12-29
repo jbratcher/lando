@@ -47,6 +47,14 @@ img:hover {
     opacity: 1;
 }
 
+h2 {
+    font-size: 3em;
+}
+
+h5 {
+    font-size: 2em;
+}
+
 section {
     display: flex;
     flex-flow: column nowrap;
@@ -196,7 +204,7 @@ header {
     
     h2 {
         text-transform: uppercase;
-        margin-bottom: 1rem
+        margin-bottom: 1rem;
     }
     
     h5 {
@@ -270,7 +278,7 @@ header {
         }
     
         .fa {
-            font-size: 10rem;
+            font-size: 7em;
             transition: all 0.3s ease-out;
         }
         
@@ -280,6 +288,7 @@ header {
         }
         
         .fa-mobile {
+            font-size: 10em;
             margin-top: -2.2rem;
         }
         
@@ -300,6 +309,8 @@ header {
     img {
         padding: 1rem 2rem;
         border-radius: 5rem;
+        max-width: 50vw;
+        height: auto;
     }
     
     .product-text {
@@ -317,7 +328,7 @@ header {
 }
 
 .product:nth-of-type(2) {
-       margin-top: 10rem;
+       margin-top: 3em;
    }
    
 //  Team Section
@@ -354,9 +365,9 @@ header {
         }
         
         button:hover {
-            webkit-box-shadow: 0 0 8px #303;
+            webkit-box-shadow: 0 0 4px #303;
             -moz-box-shadow: 0 0 4px #303;
-            box-shadow: 0 0.5rem 0.5rem #303;
+            box-shadow: 0 0.5rem 0.75rem #303;
         }
     
     }
@@ -371,7 +382,7 @@ footer {
     align-items: center;
     background-color: $secondary-color;
     color: #fff;
-    padding: 1.25rem 0;
+    padding: 1.25rem 0.5rem;
     
     a {
         color: #fff;
@@ -429,7 +440,7 @@ footer {
     section {
         
         p {
-            padding: 1rem 2rem 5rem;
+            padding: 1.25em
         }
     }
     
@@ -459,12 +470,14 @@ footer {
     .product {
         flex-direction: column;
         justify-content: center;
-        align-items: space-around;
+        align-items: center;
         margin: 0 2rem;
         
         img {
-            margin: 1rem 2rem;
+            padding: 0;
+            margin: 0.25em 0.5em;
             border-radius: 3rem;
+            max-width: 100%;
         }
     
     }

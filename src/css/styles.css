@@ -26,6 +26,12 @@ img {
 img:hover {
   opacity: 1; }
 
+h2 {
+  font-size: 3em; }
+
+h5 {
+  font-size: 2em; }
+
 section {
   display: flex;
   flex-flow: column nowrap;
@@ -176,12 +182,13 @@ header {
     color: #fff;
     margin-bottom: 1rem; }
   #info .card .fa {
-    font-size: 10rem;
+    font-size: 7em;
     transition: all 0.3s ease-out; }
   #info .card .fa:hover {
     color: #00b5f0;
     transform: scale(1.2); }
   #info .card .fa-mobile {
+    font-size: 10em;
     margin-top: -2.2rem; }
   #info .card .fa-forward {
     margin-left: 2rem; }
@@ -191,7 +198,9 @@ header {
   flex-flow: row nowrap; }
   .product img {
     padding: 1rem 2rem;
-    border-radius: 5rem; }
+    border-radius: 5rem;
+    max-width: 50vw;
+    height: auto; }
   .product .product-text h3 {
     color: #1d1e2b;
     text-align: center; }
@@ -199,7 +208,7 @@ header {
     text-align: left; }
 
 .product:nth-of-type(2) {
-  margin-top: 10rem; }
+  margin-top: 3em; }
 
 .team-boxes {
   display: flex;
@@ -221,9 +230,9 @@ header {
   flex: 1; }
 
 #contact form button:hover {
-  webkit-box-shadow: 0 0 8px #303;
+  webkit-box-shadow: 0 0 4px #303;
   -moz-box-shadow: 0 0 4px #303;
-  box-shadow: 0 0.5rem 0.5rem #303; }
+  box-shadow: 0 0.5rem 0.75rem #303; }
 
 footer {
   display: flex;
@@ -231,7 +240,7 @@ footer {
   align-items: center;
   background-color: #1d1e2b;
   color: #fff;
-  padding: 1.25rem 0; }
+  padding: 1.25rem 0.5rem; }
   footer a {
     color: #fff; }
   footer p {
@@ -262,7 +271,7 @@ footer {
 
 @media (max-width: 50rem) {
   section p {
-    padding: 1rem 2rem 5rem; }
+    padding: 1.25em; }
   #contact form {
     display: flex;
     flex-direction: column; }
@@ -279,11 +288,13 @@ footer {
   .product {
     flex-direction: column;
     justify-content: center;
-    align-items: space-around;
+    align-items: center;
     margin: 0 2rem; }
     .product img {
-      margin: 1rem 2rem;
-      border-radius: 3rem; }
+      padding: 0;
+      margin: 0.25em 0.5em;
+      border-radius: 3rem;
+      max-width: 100%; }
   .product-text {
     margin: 0; }
   .product-1 .product-text {
