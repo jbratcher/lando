@@ -6,6 +6,7 @@ $tert-color: #006C90;
 $font-sans: 'Source Sans Pro', sans-serif;
 $font-serif: 'Source Serif Pro', serif;
 $header-bg: linear-gradient(to bottom, rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%);
+$font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
 $link-bg: linear-gradient(to bottom, rgba(39,42,47,1) 0%,rgba(0,0,0,1) 100%);
 $button-bg: linear-gradient(to bottom, rgba(73,155,234,1) 0%,rgba(32,124,229,1) 100%); 
 
@@ -24,6 +25,7 @@ html {
 
 body {
     font-family: $font-sans;
+    font-size: $font-size;
     overflow-x: hidden;
 }
 
@@ -54,12 +56,10 @@ section {
     
     h2 {
         text-align: center;
-        font-size: 4rem;
     }
     
     p {
         text-align: center;
-        font-size: 1.6rem;
         padding: 1rem 3rem 5rem;  
     }
 }
@@ -110,7 +110,6 @@ header {
     
     .brand {
         text-transform: uppercase;
-        font-size: 2.5rem;
     }
     
     a {
@@ -139,7 +138,6 @@ header {
                 transition: all 0.3s ease-in-out;
                 
                 a {
-                    font-size: 1.33rem;
                     padding: 1.25rem;
                     display: block;
                 }
@@ -197,13 +195,11 @@ header {
     }
     
     h2 {
-        font-size: 4rem;
         text-transform: uppercase;
         margin-bottom: 1rem
     }
     
     h5 {
-        font-size: 2rem;
         margin-bottom: 2.5rem;
     }
     
@@ -242,12 +238,10 @@ header {
     flex-flow: column nowrap;
     align-items: center;
     color: #666;
-    font-size: 1rem;
     margin: 0 1rem;
     
     h3 {
         color: $secondary-color;
-        font-size: 1.33rem;
         padding: 0 0 1rem;
     }
     
@@ -272,7 +266,6 @@ header {
         
          h3 {
             color: #fff;
-            font-size: 2rem;
             margin-bottom: 1rem;
         }
     
@@ -287,7 +280,6 @@ header {
         }
         
         .fa-mobile {
-            font-size: 15rem;
             margin-top: -2.2rem;
         }
         
@@ -304,20 +296,16 @@ header {
 .product {
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-between;
     
     img {
-        margin: 1rem 2rem;
+        padding: 1rem 2rem;
         border-radius: 5rem;
     }
     
     .product-text {
-        display: flex;
-        flex-direction: column;
         
         h3 {
             color: $secondary-color;
-            font-size: 2rem;
             text-align: center;
         }
         
@@ -360,7 +348,6 @@ header {
         input {
             padding: 1rem;
             margin-right: 2rem;
-            font-size: 1.125rem;
             border-radius: 1rem;
             color: #555;
             flex: 1;
@@ -392,7 +379,6 @@ footer {
     
     p {
         text-transform: uppercase;
-        font-size: 0.875rem;
         align-self: center;
         padding: 1rem;
     }
@@ -438,7 +424,7 @@ footer {
     
 }
 
-@media (max-width: 45rem) {
+@media (max-width: 50rem) {
     
     section {
         
@@ -450,10 +436,10 @@ footer {
     #contact form {
         display: flex;
         flex-direction: column;
-    }
-    
-    #contact form input {
-        margin-right: 0;
+        
+        input {
+            margin-right: 0;
+        }
     }
     
     .features, .info-boxes, .team-boxes {
@@ -474,21 +460,30 @@ footer {
         flex-direction: column;
         justify-content: center;
         align-items: space-around;
-        max-width: 80vw;
         margin: 0 2rem;
+        
+        img {
+            margin: 1rem 2rem;
+            border-radius: 3rem;
+        }
+    
     }
     
     .product-text {
         margin: 0;
     }
     
-    .product-1 .product-text {
-        order: 0;
-    }
+    .product-1 {
+        
+        .product-text {
+            order: 0;
+        }
+        
+        img {
+            order: 1;
+            margin: 1rem;
+        }
     
-    .product-1 img {
-        order: 1;
-        margin: 1rem;
     }
     
 }
@@ -514,7 +509,6 @@ footer {
         display: inline-block;
         padding: 2rem 0;
         line-height: 1rem;
-        font-size: 1.33rem;
         color: #fff;
         transition: all 0.3s ease-out;
     }
@@ -570,7 +564,6 @@ footer {
     
     .main-menu .menu-close {
         position: absolute;
-        font-size: 2rem;
         top: 1.5rem;
         right: 30%;
         background: $secondary-color;

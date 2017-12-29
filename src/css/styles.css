@@ -9,6 +9,7 @@ html {
 
 body {
   font-family: "Source Sans Pro", sans-serif;
+  font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
   overflow-x: hidden; }
 
 a {
@@ -32,11 +33,9 @@ section {
   color: #eee;
   padding: 5rem 1rem; }
   section h2 {
-    text-align: center;
-    font-size: 4rem; }
+    text-align: center; }
   section p {
     text-align: center;
-    font-size: 1.6rem;
     padding: 1rem 3rem 5rem; }
 
 section:not(.hero):nth-child(odd) {
@@ -73,8 +72,7 @@ header {
   align-items: center;
   padding: 0 3rem; }
   header .brand {
-    text-transform: uppercase;
-    font-size: 2.5rem; }
+    text-transform: uppercase; }
   header a {
     color: #fff;
     opacity: 0.75;
@@ -93,7 +91,6 @@ header {
       border-bottom: none;
       transition: all 0.3s ease-in-out; }
       header nav ul li a {
-        font-size: 1.33rem;
         padding: 1.25rem;
         display: block; }
     header nav ul li:hover {
@@ -131,11 +128,9 @@ header {
   .hero-content h2, .hero-content h5 {
     text-shadow: 0 0.125rem 0.125rem #333; }
   .hero-content h2 {
-    font-size: 4rem;
     text-transform: uppercase;
     margin-bottom: 1rem; }
   .hero-content h5 {
-    font-size: 2rem;
     margin-bottom: 2.5rem; }
   .hero-content button {
     padding: 1.25rem 2.875rem;
@@ -163,11 +158,9 @@ header {
   flex-flow: column nowrap;
   align-items: center;
   color: #666;
-  font-size: 1rem;
   margin: 0 1rem; }
   .card h3 {
     color: #1d1e2b;
-    font-size: 1.33rem;
     padding: 0 0 1rem; }
   .card img {
     width: 100%;
@@ -181,7 +174,6 @@ header {
   color: #fff; }
   #info .card h3 {
     color: #fff;
-    font-size: 2rem;
     margin-bottom: 1rem; }
   #info .card .fa {
     font-size: 10rem;
@@ -190,27 +182,21 @@ header {
     color: #00b5f0;
     transform: scale(1.2); }
   #info .card .fa-mobile {
-    font-size: 15rem;
     margin-top: -2.2rem; }
   #info .card .fa-forward {
     margin-left: 2rem; }
 
 .product {
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between; }
+  flex-flow: row nowrap; }
   .product img {
-    margin: 1rem 2rem;
+    padding: 1rem 2rem;
     border-radius: 5rem; }
-  .product .product-text {
-    display: flex;
-    flex-direction: column; }
-    .product .product-text h3 {
-      color: #1d1e2b;
-      font-size: 2rem;
-      text-align: center; }
-    .product .product-text p {
-      text-align: left; }
+  .product .product-text h3 {
+    color: #1d1e2b;
+    text-align: center; }
+  .product .product-text p {
+    text-align: left; }
 
 .product:nth-of-type(2) {
   margin-top: 10rem; }
@@ -230,7 +216,6 @@ header {
 #contact form input {
   padding: 1rem;
   margin-right: 2rem;
-  font-size: 1.125rem;
   border-radius: 1rem;
   color: #555;
   flex: 1; }
@@ -251,7 +236,6 @@ footer {
     color: #fff; }
   footer p {
     text-transform: uppercase;
-    font-size: 0.875rem;
     align-self: center;
     padding: 1rem; }
   footer p a {
@@ -276,14 +260,14 @@ footer {
     header h1 {
       display: none; } }
 
-@media (max-width: 45rem) {
+@media (max-width: 50rem) {
   section p {
     padding: 1rem 2rem 5rem; }
   #contact form {
     display: flex;
     flex-direction: column; }
-  #contact form input {
-    margin-right: 0; }
+    #contact form input {
+      margin-right: 0; }
   .features, .info-boxes, .team-boxes {
     flex-direction: column;
     justify-content: space-around;
@@ -296,8 +280,10 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: space-around;
-    max-width: 80vw;
     margin: 0 2rem; }
+    .product img {
+      margin: 1rem 2rem;
+      border-radius: 3rem; }
   .product-text {
     margin: 0; }
   .product-1 .product-text {
@@ -320,7 +306,6 @@ footer {
   display: inline-block;
   padding: 2rem 0;
   line-height: 1rem;
-  font-size: 1.33rem;
   color: #fff;
   transition: all 0.3s ease-out; }
 
@@ -363,7 +348,6 @@ a#main-menu-toggle {
 
 .main-menu .menu-close {
   position: absolute;
-  font-size: 2rem;
   top: 1.5rem;
   right: 30%;
   background: #1d1e2b; }
