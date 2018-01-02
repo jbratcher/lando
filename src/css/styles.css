@@ -369,7 +369,7 @@ a#main-menu-toggle {
 .main-menu:target,
 .main-menu[aria-expanded="true"] {
   right: 0;
-  background: linear-gradient(to bottom, #45484d 0%, black 5%);
+  background: linear-gradient(to bottom, #45484d 0%, black 4.3%);
   outline: none;
   -moz-box-shadow: 0.1875rem 0 0.75rem rgba(29, 30, 43, 0.85);
   -webkit-box-shadow: 0.1875rem 0 0.75rem rgba(29, 30, 43, 0.85);
