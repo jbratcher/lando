@@ -5,10 +5,11 @@ $secondary-color: #1d1e2b;
 $tert-color: #006C90;
 $font-sans: 'Source Sans Pro', sans-serif;
 $font-serif: 'Source Serif Pro', serif;
-$header-bg: linear-gradient(to bottom, rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%);
 $font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
-$link-bg: linear-gradient(to bottom, rgba(39,42,47,1) 0%,rgba(0,0,0,1) 100%);
+$header-bg: linear-gradient(to bottom, rgba(69,72,77,1) 0%,rgba(0,0,0,1) 40%);
+$link-bg: linear-gradient(to top, rgba(39,42,47,1) 0%,rgba(0,0,0,1) 40%);
 $button-bg: linear-gradient(to bottom, rgba(73,155,234,1) 0%,rgba(32,124,229,1) 100%); 
+$mobile-bg: linear-gradient(to bottom, rgba(69,72,77,1) 0%,rgba(0,0,0,1) 5%);
 
 //Global
 
@@ -520,7 +521,7 @@ footer {
     
     .menu-toggle {
         display: inline-block;
-        padding: 2rem 0;
+        padding: 1rem;
         line-height: 1rem;
         color: #fff;
         transition: all 0.3s ease-out;
@@ -577,7 +578,7 @@ footer {
     
     .main-menu .menu-close {
         position: absolute;
-        top: 1.5rem;
+        top: 5%;
         right: 30%;
         background: $secondary-color;
     }
@@ -594,6 +595,7 @@ footer {
     .main-menu:target,
     .main-menu[aria-expanded="true"] {
       right: 0;
+      background: $mobile-bg;
       outline: none;
       -moz-box-shadow: 0.1875rem 0 0.75rem rgba(29, 30, 43,.85);
       -webkit-box-shadow: 0.1875rem 0 0.75rem rgba(29, 30, 43,.85);
@@ -609,6 +611,7 @@ footer {
     .main-menu[aria-expanded="true"] ul {
       position: relative;
       z-index: 1000;
+      background: #000;
     }
 
     // Larger screen styling

@@ -72,7 +72,7 @@ button:hover {
     text-decoration: none; }
 
 header {
-  background: linear-gradient(to bottom, #45484d 0%, black 100%);
+  background: linear-gradient(to bottom, #45484d 0%, black 40%);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -100,7 +100,7 @@ header {
         padding: 1.25rem;
         display: block; }
     header nav ul li:hover {
-      background: linear-gradient(to bottom, #272a2f 0%, black 100%);
+      background: linear-gradient(to top, #272a2f 0%, black 40%);
       border: 0.0625rem solid #00b5f0;
       border-top: none;
       border-bottom: none; }
@@ -315,7 +315,7 @@ footer {
 
 .menu-toggle {
   display: inline-block;
-  padding: 2rem 0;
+  padding: 1rem;
   line-height: 1rem;
   color: #fff;
   transition: all 0.3s ease-out; }
@@ -359,7 +359,7 @@ a#main-menu-toggle {
 
 .main-menu .menu-close {
   position: absolute;
-  top: 1.5rem;
+  top: 5%;
   right: 30%;
   background: #1d1e2b; }
 
@@ -369,6 +369,7 @@ a#main-menu-toggle {
 .main-menu:target,
 .main-menu[aria-expanded="true"] {
   right: 0;
+  background: linear-gradient(to bottom, #45484d 0%, black 5%);
   outline: none;
   -moz-box-shadow: 0.1875rem 0 0.75rem rgba(29, 30, 43, 0.85);
   -webkit-box-shadow: 0.1875rem 0 0.75rem rgba(29, 30, 43, 0.85);
@@ -381,7 +382,8 @@ a#main-menu-toggle {
 .main-menu:target ul,
 .main-menu[aria-expanded="true"] ul {
   position: relative;
-  z-index: 1000; }
+  z-index: 1000;
+  background: #000; }
 
 @media (min-width: 45rem) {
   .menu-toggle,
