@@ -5,9 +5,11 @@ $secondary-color: #1d1e2b;
 $tert-color: #006C90;
 $font-sans: 'Source Sans Pro', sans-serif;
 $font-serif: 'Source Serif Pro', serif;
-$header-bg: linear-gradient(to bottom, rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%);
-$link-bg: linear-gradient(to bottom, rgba(39,42,47,1) 0%,rgba(0,0,0,1) 100%);
+$font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+$header-bg: linear-gradient(to bottom, rgba(69,72,77,1) 0%,rgba(0,0,0,1) 40%);
+$link-bg: linear-gradient(to top, rgba(39,42,47,1) 0%,rgba(0,0,0,1) 40%);
 $button-bg: linear-gradient(to bottom, rgba(73,155,234,1) 0%,rgba(32,124,229,1) 100%); 
+$mobile-bg: linear-gradient(to bottom, rgba(69,72,77,1) 0%,rgba(0,0,0,1) 4.3%);
 
 //Global
 
@@ -24,6 +26,7 @@ html {
 
 body {
     font-family: $font-sans;
+    font-size: $font-size;
     overflow-x: hidden;
 }
 
@@ -45,6 +48,14 @@ img:hover {
     opacity: 1;
 }
 
+h2 {
+    font-size: 3em;
+}
+
+h5 {
+    font-size: 2em;
+}
+
 section {
     display: flex;
     flex-flow: column nowrap;
@@ -54,12 +65,10 @@ section {
     
     h2 {
         text-align: center;
-        font-size: 4rem;
     }
     
     p {
         text-align: center;
-        font-size: 1.6rem;
         padding: 1rem 3rem 5rem;  
     }
 }
@@ -79,7 +88,7 @@ button {
     top: 0;
     margin: 1rem;
     padding: 1rem;
-    border-radius: 0.3rem;
+    border-radius: 1rem;
     text-transform: uppercase;
     font-weight: bold;
     text-align: center;
@@ -110,7 +119,6 @@ header {
     
     .brand {
         text-transform: uppercase;
-        font-size: 2.5rem;
     }
     
     a {
@@ -139,8 +147,7 @@ header {
                 transition: all 0.3s ease-in-out;
                 
                 a {
-                    font-size: 1.33rem;
-                    padding: 2rem;
+                    padding: 1.25rem;
                     display: block;
                 }
             }
@@ -197,13 +204,11 @@ header {
     }
     
     h2 {
-        font-size: 4rem;
         text-transform: uppercase;
-        margin-bottom: 1rem
+        margin-bottom: 1rem;
     }
     
     h5 {
-        font-size: 2rem;
         margin-bottom: 2.5rem;
     }
     
@@ -242,12 +247,10 @@ header {
     flex-flow: column nowrap;
     align-items: center;
     color: #666;
-    font-size: 1rem;
     margin: 0 1rem;
     
     h3 {
         color: $secondary-color;
-        font-size: 1.33rem;
         padding: 0 0 1rem;
     }
     
@@ -272,12 +275,11 @@ header {
         
          h3 {
             color: #fff;
-            font-size: 2rem;
             margin-bottom: 1rem;
         }
     
         .fa {
-            font-size: 10rem;
+            font-size: 7em;
             transition: all 0.3s ease-out;
         }
         
@@ -287,7 +289,7 @@ header {
         }
         
         .fa-mobile {
-            font-size: 15rem;
+            font-size: 10em;
             margin-top: -2.2rem;
         }
         
@@ -304,20 +306,18 @@ header {
 .product {
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-between;
     
     img {
-        margin: 1rem 2rem;
+        padding: 1rem 2rem;
         border-radius: 5rem;
+        max-width: 50vw;
+        height: auto;
     }
     
     .product-text {
-        display: flex;
-        flex-direction: column;
         
         h3 {
             color: $secondary-color;
-            font-size: 2rem;
             text-align: center;
         }
         
@@ -329,7 +329,7 @@ header {
 }
 
 .product:nth-of-type(2) {
-       margin-top: 10rem;
+       margin-top: 3em;
    }
    
 //  Team Section
@@ -353,14 +353,27 @@ header {
 
 // Contact
 
-#contact form input {
-    padding: 1rem;
-    margin-right: 2rem;
-    font-size: 1.125rem;
-    border-radius: 1rem;
-    color: #555;
-    flex: 1;
-}
+#contact {
+    
+    form {
+        
+        input {
+            padding: 1rem;
+            margin-right: 2rem;
+            border-radius: 1rem;
+            color: #555;
+            flex: 1;
+        }
+        
+        button:hover {
+            webkit-box-shadow: 0 0 4px #303;
+            -moz-box-shadow: 0 0 4px #303;
+            box-shadow: 0 0.5rem 0.75rem #303;
+        }
+    
+    }
+    
+} 
 
 //Footer
 
@@ -370,7 +383,7 @@ footer {
     align-items: center;
     background-color: $secondary-color;
     color: #fff;
-    padding: 1.25rem 0;
+    padding: 1.25rem 0.5rem;
     
     a {
         color: #fff;
@@ -378,7 +391,6 @@ footer {
     
     p {
         text-transform: uppercase;
-        font-size: 0.875rem;
         align-self: center;
         padding: 1rem;
     }
@@ -424,22 +436,22 @@ footer {
     
 }
 
-@media (max-width: 45rem) {
+@media (max-width: 50rem) {
     
     section {
         
         p {
-            padding: 1rem 2rem 5rem;
+            padding: 1.25em
         }
     }
     
     #contact form {
         display: flex;
         flex-direction: column;
-    }
-    
-    #contact form input {
-        margin-right: 0;
+        
+        input {
+            margin-right: 0;
+        }
     }
     
     .features, .info-boxes, .team-boxes {
@@ -459,22 +471,33 @@ footer {
     .product {
         flex-direction: column;
         justify-content: center;
-        align-items: space-around;
-        max-width: 80vw;
+        align-items: center;
         margin: 0 2rem;
+        
+        img {
+            padding: 0;
+            margin: 0.25em 0.5em;
+            border-radius: 3rem;
+            max-width: 100%;
+        }
+    
     }
     
     .product-text {
         margin: 0;
     }
     
-    .product-1 .product-text {
-        order: 0;
-    }
+    .product-1 {
+        
+        .product-text {
+            order: 0;
+        }
+        
+        img {
+            order: 1;
+            margin: 1rem;
+        }
     
-    .product-1 img {
-        order: 1;
-        margin: 1rem;
     }
     
 }
@@ -498,9 +521,8 @@ footer {
     
     .menu-toggle {
         display: inline-block;
-        padding: 2rem 0;
+        padding: 1rem;
         line-height: 1rem;
-        font-size: 1.33rem;
         color: #fff;
         transition: all 0.3s ease-out;
     }
@@ -556,8 +578,7 @@ footer {
     
     .main-menu .menu-close {
         position: absolute;
-        font-size: 2rem;
-        top: 1.5rem;
+        top: 5%;
         right: 30%;
         background: $secondary-color;
     }
@@ -574,6 +595,7 @@ footer {
     .main-menu:target,
     .main-menu[aria-expanded="true"] {
       right: 0;
+      background: $mobile-bg;
       outline: none;
       -moz-box-shadow: 0.1875rem 0 0.75rem rgba(29, 30, 43,.85);
       -webkit-box-shadow: 0.1875rem 0 0.75rem rgba(29, 30, 43,.85);
@@ -589,6 +611,7 @@ footer {
     .main-menu[aria-expanded="true"] ul {
       position: relative;
       z-index: 1000;
+      background: #000;
     }
 
     // Larger screen styling
