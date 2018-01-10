@@ -19,6 +19,11 @@ Lando offers a lot of punch using only HTML and CSS.
 
 # Change Log
 
+v1.6
+
+* Added hover border to mobile menu links
+* Add gradient background to footer
+
 v1.5
 
 * Updated relative links for css and hero image

@@ -238,7 +238,7 @@ footer {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #1d1e2b;
+  background: linear-gradient(to top, #1d2025 0%, black 40%);
   color: #fff;
   padding: 1.25rem 0.5rem; }
   footer a {
@@ -351,8 +351,8 @@ footer {
     transition: all 0.3s ease-in-out; }
   .main-menu ul li:hover {
     border: 0.0625rem solid #00b5f0;
-    border-top: none;
-    border-bottom: none; }
+    border-left: none;
+    border-right: none; }
 
 a#main-menu-toggle {
   margin-left: 90%; }
