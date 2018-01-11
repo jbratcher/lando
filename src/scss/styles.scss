@@ -120,6 +120,11 @@ header {
     
     .brand {
         text-transform: uppercase;
+        
+        &:hover {
+            text-shadow: 0 0 0.125rem rgba(250, 250, 250, 1);
+        }
+        
     }
     
     a {
@@ -568,8 +573,8 @@ footer {
         
         li:hover {
             border: 0.0625rem solid $primary-color;
-            border-left: none;
-            border-right: none;
+            border-top: none;
+            border-bottom: none;
         }
     }
     
@@ -586,6 +591,10 @@ footer {
     
     .main-menu .menu-close a {
         padding: 0;
+    }
+    
+    #mobile-menu {
+        border: none;
     }
 
     
@@ -606,6 +615,7 @@ footer {
     .main-menu:target .menu-close,
     .main-menu[aria-expanded="true"] .menu-close {
       z-index: 1001;
+      background: black;
     }
 
     .main-menu:target ul,
@@ -613,6 +623,13 @@ footer {
       position: relative;
       z-index: 1000;
       background: #000;
+      
+      li:hover {
+            border: 0.0625rem solid $primary-color;
+            border-left: none;
+            border-right: none;
+        }
+        
     }
 
     // Larger screen styling
