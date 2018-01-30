@@ -15,16 +15,14 @@ body {
 a {
   text-decoration: none;
   transition: all 0.3s ease-in-out; }
-
-a:hover {
-  text-decoration: underline; }
+  a:hover {
+    text-decoration: underline; }
 
 img {
   opacity: 0.75;
   transition: all 0.3s ease-in-out; }
-
-img:hover {
-  opacity: 1; }
+  img:hover {
+    opacity: 1; }
 
 h2 {
   font-size: 3em; }
@@ -43,14 +41,12 @@ section {
   section p {
     text-align: center;
     padding: 1rem 3rem 5rem; }
-
-section:not(.hero):nth-child(odd) {
-  background: #fefefe;
-  color: #1d1e2b; }
-
-section:not(.hero):nth-child(even) {
-  background: #1d1e2b;
-  color: #fefefe; }
+  section:not(.hero):nth-child(odd) {
+    background: #fefefe;
+    color: #1d1e2b; }
+  section:not(.hero):nth-child(even) {
+    background: #1d1e2b;
+    color: #fefefe; }
 
 button {
   position: relative;
@@ -65,11 +61,10 @@ button {
   transition: all 0.5s ease-in-out; }
   button a {
     color: #fff; }
-
-button:hover {
-  top: -0.2rem; }
-  button:hover a {
-    text-decoration: none; }
+  button:hover {
+    top: -0.2rem; }
+    button:hover a {
+      text-decoration: none; }
 
 header {
   background: linear-gradient(to bottom, #45484d 0%, black 40%);
@@ -85,10 +80,10 @@ header {
     color: #fff;
     opacity: 0.75;
     transition: all 0.3s ease-out; }
-  header a:hover {
-    color: #00b5f0;
-    opacity: 1;
-    text-decoration: none; }
+    header a:hover {
+      color: #00b5f0;
+      opacity: 1;
+      text-decoration: none; }
   header nav ul {
     display: flex;
     list-style: none; }
@@ -98,14 +93,14 @@ header {
       border-top: none;
       border-bottom: none;
       transition: all 0.3s ease-in-out; }
+      header nav ul li:hover {
+        background: linear-gradient(to top, #272a2f 0%, black 40%);
+        border: 0.0625rem solid #00b5f0;
+        border-top: none;
+        border-bottom: none; }
       header nav ul li a {
         padding: 1.25rem;
         display: block; }
-    header nav ul li:hover {
-      background: linear-gradient(to top, #272a2f 0%, black 40%);
-      border: 0.0625rem solid #00b5f0;
-      border-top: none;
-      border-bottom: none; }
   header nav i {
     color: #00b5f0;
     opacity: 1; }
@@ -117,16 +112,15 @@ header {
   text-align: center;
   min-height: 100vh;
   color: #fff; }
-
-.hero .background-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: center center cover;
-  z-index: -1;
-  opacity: 1; }
+  .hero .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: center center cover;
+    z-index: -1;
+    opacity: 1; }
 
 .hero-content {
   display: flex;
@@ -146,11 +140,11 @@ header {
     -moz-box-shadow: 3px 3px 4px #636363;
     box-shadow: 0 0 0.5rem #636363;
     transition: all 0.3s ease-in-out; }
-  .hero-content button:hover {
-    cursor: pointer;
-    -webkit-box-shadow: 3px 3px 4px #303030;
-    -moz-box-shadow: 3px 3px 4px #303030;
-    box-shadow: 0 0.5rem 1rem #303030; }
+    .hero-content button:hover {
+      cursor: pointer;
+      -webkit-box-shadow: 3px 3px 4px #303030;
+      -moz-box-shadow: 3px 3px 4px #303030;
+      box-shadow: 0 0.5rem 1rem #303030; }
 
 .features, .info-boxes {
   width: 100vw;
@@ -175,8 +169,8 @@ header {
     padding: 1rem;
     border-radius: 30%;
     transition: all 0.8s ease-out; }
-  .card img:hover {
-    transform: scale(1.2); }
+    .card img:hover {
+      transform: scale(1.2); }
 
 #info .card {
   color: #fff; }
@@ -186,9 +180,9 @@ header {
   #info .card .fa {
     font-size: 7em;
     transition: all 0.3s ease-out; }
-  #info .card .fa:hover {
-    color: #00b5f0;
-    transform: scale(1.2); }
+    #info .card .fa:hover {
+      color: #00b5f0;
+      transform: scale(1.2); }
   #info .card .fa-mobile {
     font-size: 10em;
     margin-top: -2.2rem; }
@@ -261,9 +255,9 @@ footer {
       position: relative;
       top: 0.2rem;
       transition: all 0.5s linear; }
-    footer ul li i.fa:hover {
-      top: 0;
-      color: #00b5f0; }
+      footer ul li i.fa:hover {
+        top: 0;
+        color: #00b5f0; }
 
 @media (max-width: 60rem) {
   header {
