@@ -55,7 +55,7 @@ button {
   text-transform: uppercase;
   font-weight: bold;
   text-align: center;
-  background: radial-gradient(at top right, #499bea 0%, #207ce5 100%);
+  background: radial-gradient(at top right, #646894 0%, #1d1e2b 100%);
   transition: all 0.5s ease-in-out; }
   button a {
     color: #fff; }
@@ -163,12 +163,12 @@ header {
     color: #1d1e2b;
     padding: 0 0 1rem; }
   .card img {
-    width: 100%;
+    width: 30vw;
     padding: 1rem;
     border-radius: 30%;
     transition: all 0.8s ease-out; }
     .card img:hover {
-      transform: scale(1.2); }
+      transform: scale(1.1); }
 
 #info .card {
   color: #fff; }
@@ -212,7 +212,8 @@ header {
     color: #fff;
     padding: 2rem 0; }
   .team-boxes img {
-    max-width: 100%;
+    width: 40vw;
+    height: 50vh;
     padding: 1rem 5rem;
     border-radius: 50%; }
 
@@ -275,6 +276,11 @@ footer {
     flex-direction: column;
     justify-content: space-around;
     align-items: center; }
+  .features .card img {
+    width: 85vw; }
+  .team-boxes .card img {
+    width: 85vw;
+    height: 70vh; }
   .card {
     margin-bottom: 2rem; }
   .fa-mobile {

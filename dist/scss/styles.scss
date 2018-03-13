@@ -9,7 +9,7 @@ $font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
 $header-bg: linear-gradient(to bottom, rgba(69,72,77,1) 0%,rgba(0,0,0,1) 40%);
 $footer-bg: linear-gradient(to top, rgba(29,32,37,1) 0%,rgba(0,0,0,1) 40%);
 $link-bg: linear-gradient(to top, rgba(39,42,47,1) 0%,rgba(0,0,0,1) 40%);
-$button-bg: radial-gradient(at top right, rgba(73,155,234,1) 0%,rgba(32,124,229,1) 100%); 
+$button-bg: radial-gradient(at top right, rgba(100, 104, 148,1) 0%,rgba(29, 30, 43,1) 100%); 
 $mobile-bg: linear-gradient(to bottom, rgba(69,72,77,1) 0%,rgba(0,0,0,1) 4.3%);
 
 //Global
@@ -266,13 +266,13 @@ header {
     }
     
     img {
-        width: 100%;
+        width: 30vw;
         padding: 1rem;
         border-radius: 30%;
         transition: all 0.8s ease-out;
         
         &:hover {
-            transform: scale(1.2);
+            transform: scale(1.1);
         }
         
     }
@@ -359,7 +359,8 @@ header {
     }
     
     img {
-        max-width: 100%;
+        width: 40vw;
+        height: 50vh;
         padding: 1rem 5rem;
         border-radius: 50%;
     }
@@ -474,6 +475,15 @@ footer {
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
+    }
+    
+    .features .card img {
+        width: 85vw;
+    }
+    
+    .team-boxes .card img {
+        width: 85vw;
+        height: 70vh;
     }
     
     .card {
