@@ -194,7 +194,8 @@ header {
     padding: 1rem 2rem;
     border-radius: 5rem;
     max-width: 50vw;
-    height: auto; }
+    height: 100%;
+    max-height: 100vh; }
   .product .product-text h3 {
     color: #1d1e2b;
     text-align: center; }
@@ -280,7 +281,8 @@ footer {
     width: 85vw; }
   .team-boxes .card img {
     width: 85vw;
-    height: 70vh; }
+    max-height: 15rem;
+    height: 100%; }
   .card {
     margin-bottom: 2rem; }
   .fa-mobile {
