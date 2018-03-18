@@ -220,20 +220,15 @@ header {
     
     h5 {
         margin-bottom: 2.5rem;
+        text-shadow: 1px 1px 15px #000;
     }
     
     button {
         padding: 1.25rem 2.875rem;
-        -webkit-box-shadow: 3px 3px 4px #636363;
-        -moz-box-shadow: 3px 3px 4px #636363;
-        box-shadow: 0 0 0.5rem #636363;
         transition: all 0.3s ease-in-out;
         
         &:hover {
             cursor: pointer;
-            -webkit-box-shadow: 3px 3px 4px #303030;
-            -moz-box-shadow: 3px 3px 4px #303030;
-            box-shadow: 0 0.5rem 1rem #303030;
         }
     
     }
