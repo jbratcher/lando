@@ -356,7 +356,7 @@ header {
     
     img {
         width: 25vw;
-        height: 50vh;
+        height: 30vh;
         border-radius: 50%;
     }
 }
@@ -448,7 +448,7 @@ footer {
     
 }
 
-@media (max-width: 50rem) {
+@media (max-width: 40rem) {
     
     section {
         
@@ -477,7 +477,8 @@ footer {
     }
     
     .team-boxes .card img {
-        width: 75vw;
+        width: 50vw;
+        height: 35vh;
     }
     
     .card {
@@ -498,7 +499,9 @@ footer {
             padding: 0;
             margin: 0.25em 0.5em;
             border-radius: 3rem;
-            max-width: 100%;
+            width: 100%;
+            max-width: 90vw;
+            height: 40vh;
         }
     
     }
