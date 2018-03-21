@@ -86,7 +86,6 @@ header {
     display: flex;
     list-style: none; }
     header nav ul li {
-      align-self: center;
       border: 0.0625rem solid #333;
       border-top: none;
       border-bottom: none;
@@ -142,7 +141,7 @@ header {
 .features, .info-boxes {
   width: 100vw;
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row;
   justify-content: space-around; }
 
 .features .card {
@@ -204,13 +203,18 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around; }
-  .team-boxes h3 {
-    color: #fff;
-    padding: 2rem 0; }
-  .team-boxes img {
-    width: 25vw;
-    height: 30vh;
-    border-radius: 50%; }
+  .team-boxes .card {
+    display: flex;
+    flex-direction: column; }
+    .team-boxes .card h3 {
+      color: #fff;
+      padding: 1rem 0 0.5rem; }
+    .team-boxes .card p {
+      padding: 0 0 0.5rem; }
+    .team-boxes .card img {
+      width: 25vw;
+      height: 30vh;
+      border-radius: 50%; }
 
 #contact form input {
   padding: 1rem;

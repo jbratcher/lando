@@ -148,7 +148,6 @@ header {
             list-style: none;
             
             li {
-                align-self: center;
                 border: 0.0625rem solid #333;
                 border-top: none;
                 border-bottom: none;
@@ -240,7 +239,7 @@ header {
 .features, .info-boxes {
     width: 100vw;
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row;
     justify-content: space-around;
 }
 
@@ -349,16 +348,28 @@ header {
     flex-wrap: wrap;
     justify-content: space-around;
     
-    h3 {
-        color: #fff;
-        padding: 2rem 0;
+    .card {
+        display: flex;
+        flex-direction: column;
+        
+        h3 {
+            color: #fff;
+            padding: 1rem 0 0.5rem;
+        }
+        
+        p {
+            padding: 0 0 0.5rem;
+        }
+        
+        img {
+            width: 25vw;
+            height: 30vh;
+            border-radius: 50%;
+        }
+        
     }
     
-    img {
-        width: 25vw;
-        height: 30vh;
-        border-radius: 50%;
-    }
+    
 }
 
 // Contact
