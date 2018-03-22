@@ -115,11 +115,12 @@ button {
 header {
     background: $header-bg;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 0 1rem;
     
     .brand {
+        display: none;
         text-transform: uppercase;
         
         &:hover {
@@ -362,8 +363,8 @@ header {
         }
         
         img {
-            width: 25vw;
-            height: 30vh;
+            width: 50vw;
+            height: 40vh;
             border-radius: 50%;
         }
         
@@ -447,26 +448,46 @@ footer {
 
 // Media Queries
 
-@media (max-width: 60rem) {
+@media (min-width: 60rem) {
     
     header {
-        justify-content: center;
         
-        h1 {
-            display: none;
+        justify-content: space-between;
+        
+        .brand {
+            display: block;
         }
+    }
+    
+    .team-boxes .card img {
+        width: 30vw;
+        height: 60vh;
+    }
+    
+}
+
+@media (min-width: 40rem) and (max-width: 60rem) {
+    
+    .team-boxes .card img {
+        width: 40vw;
+        height: 40vh;
+    }
+    
+}
+
+@media (min-width: 40rem) {
+    
+    section {
+        
+        p {
+            padding: 1rem 3rem 5rem;
+        }
+        
     }
     
 }
 
 @media (max-width: 40rem) {
-    
-    section {
-        
-        p {
-            padding: 1.25em
-        }
-    }
     
     #contact form {
         display: flex;
@@ -485,11 +506,6 @@ footer {
     
     .features .card img {
         width: 85vw;
-    }
-    
-    .team-boxes .card img {
-        width: 50vw;
-        height: 35vh;
     }
     
     .card {
