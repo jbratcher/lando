@@ -1,5 +1,7 @@
 # Lando
 
+v1.6
+
 Lando is a multipurpose landing page template made with pure HTML and CSS.
 
 Lando offers a lot of punch using only HTML and CSS.
@@ -22,7 +24,8 @@ Lando offers a lot of punch using only HTML and CSS.
 v1.6
 
 * Added hover border to mobile menu links
-* Add gradient background to footer
+* Added gradient background to footer
+* Added radial gradient background to buttons
 
 v1.5
 

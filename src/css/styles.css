@@ -38,7 +38,7 @@ section {
     text-align: center; }
   section p {
     text-align: center;
-    padding: 1rem 3rem 5rem; }
+    padding: 1rem 3rem 3rem; }
   section:not(.hero):nth-child(odd) {
     background: #fefefe;
     color: #1d1e2b; }
@@ -108,7 +108,7 @@ header {
   position: relative;
   justify-content: center;
   text-align: center;
-  min-height: 100vh;
+  min-height: 80vh;
   color: #fff; }
   .hero .background-image {
     position: absolute;
@@ -169,7 +169,7 @@ header {
   color: #fff; }
   #info .card h3 {
     color: #fff;
-    margin: 2rem 0 2rem; }
+    margin: 2rem 0; }
   #info .card .fa {
     font-size: 7em;
     transition: all 0.3s ease-out; }
@@ -192,10 +192,14 @@ header {
     height: 100%;
     max-height: 70vh; }
   .product .product-text h3 {
+    font-size: 1.5em;
     color: #1d1e2b;
     text-align: center; }
   .product .product-text p {
-    text-align: left; }
+    text-align: left;
+    padding-bottom: 0.5rem; }
+    .product .product-text p:last-of-type {
+      padding-bottom: 2rem; }
 
 .product:nth-of-type(2) {
   margin-top: 3em; }
@@ -213,8 +217,10 @@ header {
     .team-boxes .card p {
       padding: 0 0 0.5rem; }
     .team-boxes .card img {
-      width: 50vw;
-      height: 40vh;
+      width: 188px;
+      height: 267px;
+      max-width: 90vw;
+      max-height: 30vh;
       border-radius: 50%; }
 
 #contact form input {
@@ -265,11 +271,13 @@ footer {
       display: block; }
   .team-boxes .card img {
     width: 30vw;
-    height: 60vh; } }
+    height: 50vh;
+    max-width: 50vw;
+    max-height: 70vh; } }
 
 @media (min-width: 40rem) and (max-width: 60rem) {
   .team-boxes .card img {
-    width: 40vw;
+    max-width: 40vw;
     height: 40vh; } }
 
 @media (min-width: 40rem) {
