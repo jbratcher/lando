@@ -267,9 +267,7 @@ footer {
 @media (min-width: 80rem) {
   .team-boxes .card img {
     width: 30vw;
-    height: 35vh;
-    max-width: 640px;
-    max-height: 640px; } }
+    height: 35vh; } }
 
 @media (min-width: 60rem) and (max-width: 80rem) {
   header {
@@ -278,16 +276,12 @@ footer {
       display: block; }
   .team-boxes .card img {
     width: 30vw;
-    height: 35vh;
-    max-width: 640px;
-    max-height: 640px; } }
+    height: 35vh; } }
 
 @media (min-width: 40rem) and (max-width: 60rem) {
   .team-boxes .card img {
     width: 30vw;
-    height: 35vh;
-    max-width: 640px;
-    max-height: 640px; } }
+    height: 35vh; } }
 
 @media (min-width: 40rem) {
   section p {
