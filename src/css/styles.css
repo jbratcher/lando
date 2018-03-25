@@ -217,10 +217,10 @@ header {
     .team-boxes .card p {
       padding: 0 0 0.5rem; }
     .team-boxes .card img {
-      width: 188px;
-      height: 267px;
-      max-width: 90vw;
-      max-height: 30vh;
+      width: 50vw;
+      height: 50vh;
+      max-width: 640px;
+      max-height: 640px;
       border-radius: 50%; }
 
 #contact form input {
@@ -264,21 +264,30 @@ footer {
         top: 0;
         color: #00b5f0; }
 
-@media (min-width: 60rem) {
+@media (min-width: 80rem) {
+  .team-boxes .card img {
+    width: 30vw;
+    height: 35vh;
+    max-width: 640px;
+    max-height: 640px; } }
+
+@media (min-width: 60rem) and (max-width: 80rem) {
   header {
     justify-content: space-between; }
     header .brand {
       display: block; }
   .team-boxes .card img {
     width: 30vw;
-    height: 50vh;
-    max-width: 50vw;
-    max-height: 70vh; } }
+    height: 35vh;
+    max-width: 640px;
+    max-height: 640px; } }
 
 @media (min-width: 40rem) and (max-width: 60rem) {
   .team-boxes .card img {
-    max-width: 40vw;
-    height: 40vh; } }
+    width: 30vw;
+    height: 35vh;
+    max-width: 640px;
+    max-height: 640px; } }
 
 @media (min-width: 40rem) {
   section p {

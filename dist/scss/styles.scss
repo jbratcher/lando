@@ -371,10 +371,10 @@ header {
         }
         
         img {
-            width: 188px;
-            height: 267px;
-            max-width: 90vw;
-            max-height: 30vh;
+            width: 50vw;
+            height: 50vh;
+            max-width: 640px;
+            max-height: 640px;
             border-radius: 50%;
         }
         
@@ -456,9 +456,25 @@ footer {
 
 }
 
+///////////////////////////
+
 // Media Queries
 
-@media (min-width: 60rem) {
+///////////////////////////
+
+@media (min-width: 80rem) {
+    
+    .team-boxes .card img {
+        width: 30vw;
+        height: 35vh;
+        max-width: 640px;
+        max-height: 640px;
+    }
+    
+    
+}
+
+@media (min-width: 60rem) and (max-width: 80rem) {
     
     header {
         
@@ -471,9 +487,9 @@ footer {
     
     .team-boxes .card img {
         width: 30vw;
-        height: 50vh;
-        max-width: 50vw;
-        max-height: 70vh;
+        height: 35vh;
+        max-width: 640px;
+        max-height: 640px;
     }
     
 }
@@ -481,8 +497,10 @@ footer {
 @media (min-width: 40rem) and (max-width: 60rem) {
     
     .team-boxes .card img {
-        max-width: 40vw;
-        height: 40vh;
+        width: 30vw;
+        height: 35vh;
+        max-width: 640px;
+        max-height: 640px;
     }
     
 }
