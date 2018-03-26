@@ -68,6 +68,7 @@ section {
     }
     
     p {
+        font-family: $font-serif;
         text-align: center;
         padding: 1rem 3rem 3rem;  
     }
@@ -467,8 +468,6 @@ footer {
     .team-boxes .card img {
         width: 30vw;
         height: 35vh;
-        max-width: 640px;
-        max-height: 640px;
     }
     
     
@@ -488,8 +487,6 @@ footer {
     .team-boxes .card img {
         width: 30vw;
         height: 35vh;
-        max-width: 640px;
-        max-height: 640px;
     }
     
 }
@@ -499,8 +496,6 @@ footer {
     .team-boxes .card img {
         width: 30vw;
         height: 35vh;
-        max-width: 640px;
-        max-height: 640px;
     }
     
 }
@@ -514,6 +509,27 @@ footer {
         }
         
     }
+    
+}
+
+@media (min-width: 60rem) {
+    
+    header {
+        
+        justify-content: space-between;
+        
+        .brand {
+            display: flex;
+        }
+        
+    }
+    
+    
+}
+
+@media (min-wdith: 40rem) {
+    
+    
     
 }
 

@@ -68,6 +68,7 @@ section {
     }
     
     p {
+        font-family: $font-serif;
         text-align: center;
         padding: 1rem 3rem 3rem;  
     }
@@ -508,6 +509,27 @@ footer {
         }
         
     }
+    
+}
+
+@media (min-width: 60rem) {
+    
+    header {
+        
+        justify-content: space-between;
+        
+        .brand {
+            display: flex;
+        }
+        
+    }
+    
+    
+}
+
+@media (min-wdith: 40rem) {
+    
+    
     
 }
 

@@ -37,6 +37,7 @@ section {
   section h2 {
     text-align: center; }
   section p {
+    font-family: "Source Serif Pro", serif;
     text-align: center;
     padding: 1rem 3rem 3rem; }
   section:not(.hero):nth-child(odd) {
@@ -286,6 +287,12 @@ footer {
 @media (min-width: 40rem) {
   section p {
     padding: 1rem 3rem 5rem; } }
+
+@media (min-width: 60rem) {
+  header {
+    justify-content: space-between; }
+    header .brand {
+      display: flex; } }
 
 @media (max-width: 40rem) {
   #contact form {
