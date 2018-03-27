@@ -241,7 +241,7 @@ header {
 .features, .info-boxes {
     width: 100vw;
     display: flex;
-    flex-flow: row;
+    flex-direction: column;
     justify-content: space-around;
 }
 
@@ -355,7 +355,7 @@ header {
 
 .team-boxes {
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: column wrap;
     justify-content: space-around;
     
     .card {
@@ -390,9 +390,11 @@ header {
     
     form {
         
+        display: flex;
+        flex-direction: column;
+        
         input {
             padding: 1rem;
-            margin-right: 2rem;
             border-radius: 1rem;
             color: #555;
             flex: 1;
@@ -466,8 +468,8 @@ footer {
 @media (min-width: 80rem) {
     
     .team-boxes .card img {
-        width: 30vw;
-        height: 65vh;
+        max-width: 30vw;
+        max-height: 65vh;
     }
     
     
@@ -527,29 +529,25 @@ footer {
     
 }
 
-@media (min-wdith: 40rem) {
+@media (min-width: 40rem) {
     
+    #contact form {
+        display: block;
+        
+        input {
+            margin-right: 1rem;
+        }
+        
+    }
     
+    .features, .info-boxes, .team-boxes {
+        flex-direction: row;
+    }
     
 }
 
 @media (max-width: 40rem) {
-    
-    #contact form {
-        display: flex;
-        flex-direction: column;
-        
-        input {
-            margin-right: 0;
-        }
-    }
-    
-    .features, .info-boxes, .team-boxes {
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-    }
-    
+
     .features .card img {
         width: 85vw;
     }

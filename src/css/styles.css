@@ -143,7 +143,7 @@ header {
 .features, .info-boxes {
   width: 100vw;
   display: flex;
-  flex-flow: row;
+  flex-direction: column;
   justify-content: space-around; }
 
 .features .card {
@@ -207,7 +207,7 @@ header {
 
 .team-boxes {
   display: flex;
-  flex-wrap: wrap;
+  flex-flow: column wrap;
   justify-content: space-around; }
   .team-boxes .card {
     display: flex;
@@ -224,17 +224,18 @@ header {
       max-height: 30vh;
       border-radius: 50%; }
 
-#contact form input {
-  padding: 1rem;
-  margin-right: 2rem;
-  border-radius: 1rem;
-  color: #555;
-  flex: 1; }
-
-#contact form button:hover {
-  webkit-box-shadow: 0 0 4px #303;
-  -moz-box-shadow: 0 0 4px #303;
-  box-shadow: 0 0.5rem 0.75rem #303; }
+#contact form {
+  display: flex;
+  flex-direction: column; }
+  #contact form input {
+    padding: 1rem;
+    border-radius: 1rem;
+    color: #555;
+    flex: 1; }
+  #contact form button:hover {
+    webkit-box-shadow: 0 0 4px #303;
+    -moz-box-shadow: 0 0 4px #303;
+    box-shadow: 0 0.5rem 0.75rem #303; }
 
 footer {
   display: flex;
@@ -267,8 +268,8 @@ footer {
 
 @media (min-width: 80rem) {
   .team-boxes .card img {
-    width: 30vw;
-    height: 65vh; } }
+    max-width: 30vw;
+    max-height: 65vh; } }
 
 @media (min-width: 60rem) and (max-width: 80rem) {
   header {
@@ -294,16 +295,15 @@ footer {
     header .brand {
       display: flex; } }
 
-@media (max-width: 40rem) {
+@media (min-width: 40rem) {
   #contact form {
-    display: flex;
-    flex-direction: column; }
+    display: block; }
     #contact form input {
-      margin-right: 0; }
+      margin-right: 1rem; }
   .features, .info-boxes, .team-boxes {
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center; }
+    flex-direction: row; } }
+
+@media (max-width: 40rem) {
   .features .card img {
     width: 85vw; }
   .card {
