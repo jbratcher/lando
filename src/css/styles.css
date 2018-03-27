@@ -218,10 +218,10 @@ header {
     .team-boxes .card p {
       padding: 0 0 0.5rem; }
     .team-boxes .card img {
-      width: 50vw;
-      height: 50vh;
-      max-width: 640px;
-      max-height: 640px;
+      width: 640px;
+      height: 640px;
+      max-width: 50vw;
+      max-height: 30vh;
       border-radius: 50%; }
 
 #contact form input {
@@ -268,7 +268,7 @@ footer {
 @media (min-width: 80rem) {
   .team-boxes .card img {
     width: 30vw;
-    height: 35vh; } }
+    height: 65vh; } }
 
 @media (min-width: 60rem) and (max-width: 80rem) {
   header {
@@ -276,8 +276,8 @@ footer {
     header .brand {
       display: block; }
   .team-boxes .card img {
-    width: 30vw;
-    height: 35vh; } }
+    max-width: 30vw;
+    max-height: 65vh; } }
 
 @media (min-width: 40rem) and (max-width: 60rem) {
   .team-boxes .card img {
