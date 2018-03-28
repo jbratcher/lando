@@ -6,7 +6,7 @@
 
 html, body {
   font-family: "Source Sans Pro", sans-serif;
-  font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+  font-size: 2vw;
   overflow-x: hidden;
   scroll-behavior: smooth; }
 
@@ -64,6 +64,22 @@ button {
     top: -0.2rem; }
     button:hover a {
       text-decoration: none; }
+
+.card {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  color: #666;
+  margin: 0 1rem; }
+  .card h3 {
+    color: #1d1e2b;
+    padding: 0 0 1rem; }
+  .card img {
+    padding: 1rem;
+    border-radius: 30%;
+    transition: all 0.8s ease-out; }
+    .card img:hover {
+      transform: scale(1.1); }
 
 header {
   background: linear-gradient(to bottom, #45484d 0%, black 40%);
@@ -147,23 +163,20 @@ header {
   justify-content: space-around; }
 
 .features .card {
-  color: #1d1e2b; }
-
-.card {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  color: #666;
+  color: #1d1e2b;
   margin: 0 1rem; }
-  .card h3 {
+  .features .card h3 {
     color: #1d1e2b;
     padding: 0 0 1rem; }
-  .card img {
-    width: 30vw;
+  .features .card img {
+    width: 85vw;
     padding: 1rem;
     border-radius: 30%;
     transition: all 0.8s ease-out; }
-    .card img:hover {
+    .features .card img:hover {
       transform: scale(1.1); }
 
 #info .card {
@@ -172,13 +185,13 @@ header {
     color: #fff;
     margin: 2rem 0; }
   #info .card .fa {
-    font-size: 7em;
+    font-size: 11em;
     transition: all 0.3s ease-out; }
     #info .card .fa:hover {
       color: #00b5f0;
       transform: scale(1.2); }
   #info .card .fa-mobile {
-    font-size: 10em;
+    font-size: 20em;
     margin-top: -2.2rem; }
   #info .card .fa-forward {
     margin-left: 2rem; }
@@ -219,7 +232,7 @@ header {
       padding: 0 0 0.5rem; }
     .team-boxes .card img {
       width: 640px;
-      height: 640px;
+      height: 452px;
       max-width: 50vw;
       max-height: 30vh;
       border-radius: 50%; }
@@ -269,7 +282,7 @@ footer {
 @media (min-width: 80rem) {
   .team-boxes .card img {
     max-width: 30vw;
-    max-height: 65vh; } }
+    max-height: 60vh; } }
 
 @media (min-width: 60rem) and (max-width: 80rem) {
   header {
@@ -287,7 +300,19 @@ footer {
 
 @media (min-width: 40rem) {
   section p {
-    padding: 1rem 3rem 5rem; } }
+    padding: 1rem 3rem 5rem; }
+  .features, .info-boxes, .team-boxes {
+    flex-direction: row; }
+  .features .card img {
+    width: 30vw; }
+  #contact form {
+    display: block; }
+    #contact form input {
+      margin-right: 1rem; }
+  #info .card .fa {
+    font-size: 7em; }
+  #info .card .fa-mobile {
+    font-size: 10em; } }
 
 @media (min-width: 60rem) {
   header {
@@ -295,17 +320,7 @@ footer {
     header .brand {
       display: flex; } }
 
-@media (min-width: 40rem) {
-  #contact form {
-    display: block; }
-    #contact form input {
-      margin-right: 1rem; }
-  .features, .info-boxes, .team-boxes {
-    flex-direction: row; } }
-
 @media (max-width: 40rem) {
-  .features .card img {
-    width: 85vw; }
   .card {
     margin-bottom: 2rem; }
   .fa-mobile {
