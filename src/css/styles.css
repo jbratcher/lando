@@ -198,13 +198,16 @@ header {
 
 .product {
   display: flex;
-  flex-flow: row nowrap; }
+  flex-flow: column;
+  justify-content: center;
+  align-items: center; }
   .product img {
-    padding: 1rem 2rem;
-    border-radius: 5rem;
-    max-width: 50vw;
-    height: 100%;
-    max-height: 70vh; }
+    padding: 0;
+    margin: 0.25em 0.5em;
+    border-radius: 3rem;
+    width: 100%;
+    max-width: 90vw;
+    height: 40vh; }
   .product .product-text h3 {
     font-size: 1.5em;
     color: #1d1e2b;
@@ -214,6 +217,13 @@ header {
     padding-bottom: 0.5rem; }
     .product .product-text p:last-of-type {
       padding-bottom: 2rem; }
+
+.product-1 .product-text {
+  order: 0; }
+
+.product-1 img {
+  order: 1;
+  margin: 1rem; }
 
 .product:nth-of-type(2) {
   margin-top: 3em; }
@@ -301,10 +311,16 @@ footer {
 @media (min-width: 40rem) {
   section p {
     padding: 1rem 3rem 5rem; }
-  .features, .info-boxes, .team-boxes {
+  .features, .info-boxes, .team-boxes, .product {
     flex-direction: row; }
   .features .card img {
     width: 30vw; }
+  .product .product-1 .product-text {
+    order: 0; }
+  .product .product-1 img {
+    order: 1; }
+  .product img {
+    max-width: 50vw; }
   #contact form {
     display: block; }
     #contact form input {
@@ -319,31 +335,6 @@ footer {
     justify-content: space-between; }
     header .brand {
       display: flex; } }
-
-@media (max-width: 40rem) {
-  .card {
-    margin-bottom: 2rem; }
-  .fa-mobile {
-    margin-top: 0; }
-  .product {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0 2rem; }
-    .product img {
-      padding: 0;
-      margin: 0.25em 0.5em;
-      border-radius: 3rem;
-      width: 100%;
-      max-width: 90vw;
-      height: 40vh; }
-  .product-text {
-    margin: 0; }
-  .product-1 .product-text {
-    order: 0; }
-  .product-1 img {
-    order: 1;
-    margin: 1rem; } }
 
 .sr-only {
   position: absolute;

@@ -342,14 +342,17 @@ header {
 
 .product {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
     
     img {
-        padding: 1rem 2rem;
-        border-radius: 5rem;
-        max-width: 50vw;
-        height: 100%;
-        max-height: 70vh;
+        padding: 0;
+        margin: 0.25em 0.5em;
+        border-radius: 3rem;
+        width: 100%;
+        max-width: 90vw;
+        height: 40vh;
     }
     
     .product-text {
@@ -373,6 +376,17 @@ header {
     }
    
 }
+
+.product-1 .product-text {
+    order: 0;
+}
+
+.product-1 img {
+    order: 1;
+    margin: 1rem;
+}
+
+
 
 .product:nth-of-type(2) {
        margin-top: 3em;
@@ -539,12 +553,32 @@ footer {
         
     }
     
-    .features, .info-boxes, .team-boxes {
+    .features, .info-boxes, .team-boxes, .product {
         flex-direction: row;
     }
     
     .features .card img {
         width: 30vw;
+    }
+    
+    .product {
+        
+        .product-1 {
+        
+            .product-text {
+                order: 0;
+            }
+            
+            img {
+                order: 1;
+            }
+    
+        }
+        
+        img {
+            max-width: 50vw;
+        }
+        
     }
     
     #contact form {
@@ -580,52 +614,6 @@ footer {
             display: flex;
         }
         
-    }
-    
-}
-
-@media (max-width: 40rem) {
-
-    .card {
-        margin-bottom: 2rem;
-    }
-    
-    .fa-mobile {
-        margin-top: 0;
-    }
-    
-    .product {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: 0 2rem;
-        
-        img {
-            padding: 0;
-            margin: 0.25em 0.5em;
-            border-radius: 3rem;
-            width: 100%;
-            max-width: 90vw;
-            height: 40vh;
-        }
-    
-    }
-    
-    .product-text {
-        margin: 0;
-    }
-    
-    .product-1 {
-        
-        .product-text {
-            order: 0;
-        }
-        
-        img {
-            order: 1;
-            margin: 1rem;
-        }
-    
     }
     
 }
