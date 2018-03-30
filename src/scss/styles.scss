@@ -167,13 +167,43 @@ header {
             text-decoration: none;
         }
         
+        .menu-toggle {
+            display: inline-block;
+            padding: 1rem;
+            line-height: 1rem;
+            color: #fff;
+            transition: all 0.3s ease-out;
+        }
+        
+        .menu-toggle:hover,
+        .menu-toggle:focus {
+            color: $primary-color;
+        }
+        
     }
     
     nav {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        overflow: hidden;
+        transition: left 0.3s ease,
+        box-shadow 0.3s ease;
+        z-index: 999;
         
         ul {
             display: flex;
             list-style: none;
+            list-style: none;
+            margin: 0;
+            /* Hide shadow while 'closed' */
+            -webkit-box-shadow: -0.5rem 0 0.5rem rgba(29, 30, 43,.85);
+            -moz-box-shadow: -0.5rem 0 0.5rem rgba(29, 30, 43,.85);
+            box-shadow: -0.5rem 0 0.5rem rgba(29, 30, 43,.85);
+            height: 100%;
+            width: 12.5rem;
+            background: $secondary-color;
             
             li {
                 border: 0.0625rem solid #333;
@@ -196,6 +226,21 @@ header {
             }
             
         }
+            
+        a#main-menu-toggle {
+            margin-left: 90%;
+        }
+        
+        .menu-close {
+            position: absolute;
+            top: 5%;
+            right: 15%;
+            background: $secondary-color;
+        }
+        
+        .menu-close a {
+            padding: 0;
+        }
     
         
         i {
@@ -203,6 +248,17 @@ header {
             opacity: 1;
         }
         
+    }
+    
+    .sr-only {
+        position: absolute;
+        width: 0.625rem;
+        height: 0.625rem;
+        padding: 0;
+        margin: -0.625rem;
+        overflow: hidden;
+        clip: rect(0,0,0,0);
+        border: 0;
     }
     
 }
@@ -619,88 +675,10 @@ footer {
 }
 
 // Mobile Menu
+    
 
-    // Screen reader only
     
-    .sr-only {
-        position: absolute;
-        width: 0.625rem;
-        height: 0.625rem;
-        padding: 0;
-        margin: -0.625rem;
-        overflow: hidden;
-        clip: rect(0,0,0,0);
-        border: 0;
-    }
-
-    // Button styling
     
-    .menu-toggle {
-        display: inline-block;
-        padding: 1rem;
-        line-height: 1rem;
-        color: #fff;
-        transition: all 0.3s ease-out;
-    }
-    
-    .menu-toggle:hover,
-    .menu-toggle:focus {
-        color: $primary-color;
-    }
-
-    // Default styles + Mobile first
-    // Offscreen menu style
-    
-    .main-menu {
-        position: absolute;
-        right: 0;
-        top: 0;
-        height: 100%;
-        overflow: hidden;
-        transition: left 0.3s ease,
-        box-shadow 0.3s ease;
-        z-index: 999;
-    }
-    
-    .main-menu ul {
-        list-style: none;
-        margin: 0;
-        /* Hide shadow w/ -0.5rem while 'closed' */
-        -webkit-box-shadow: -0.5rem 0 0.5rem rgba(29, 30, 43,.85);
-        -moz-box-shadow: -0.5rem 0 0.5rem rgba(29, 30, 43,.85);
-        box-shadow: -0.5rem 0 0.5rem rgba(29, 30, 43,.85);
-        height: 100%;
-        width: 12.5rem;
-        background: $secondary-color;
-        
-        li {
-            border: 0.0625rem solid #333;
-            border-top: none;
-            border-bottom: none;
-            transition: all 0.3s ease-in-out; 
-        }
-        
-        li:hover {
-            border: 0.0625rem solid $primary-color;
-            border-top: none;
-            border-bottom: none;
-        }
-    }
-    
-    a#main-menu-toggle {
-        margin-left: 90%;
-    }
-    
-    .main-menu .menu-close {
-        position: absolute;
-        top: 5%;
-        right: 15%;
-        background: $secondary-color;
-    }
-    
-    .main-menu .menu-close a {
-        padding: 0;
-    }
     
     #mobile-menu {
         border: none;
