@@ -6,7 +6,7 @@
 
 html, body {
   font-family: "Source Sans Pro", sans-serif;
-  font-size: 2vw;
+  font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
   overflow-x: hidden;
   scroll-behavior: smooth; }
 
@@ -86,9 +86,10 @@ header {
   background: linear-gradient(to bottom, #45484d 0%, black 40%);
   display: flex;
   justify-content: flex-end;
-  padding: 1rem; }
+  padding: 0 1rem; }
   header .brand {
     display: none;
+    padding: 0 1rem;
     text-transform: uppercase; }
     header .brand:hover {
       text-shadow: 0 0 0.125rem #fafafa; }
@@ -385,7 +386,7 @@ footer {
 .main-menu[aria-expanded="true"] {
   background: linear-gradient(to bottom, #45484d 0%, black 4.3%);
   display: flex;
-  max-height: 27%;
+  max-height: 50%;
   right: 0;
   outline: none;
   -moz-box-shadow: 0.1875rem 0 0.75rem rgba(29, 30, 43, 0.85);
