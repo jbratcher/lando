@@ -140,11 +140,11 @@ button {
 // Header Section
 
 header {
+    align-items: center;
     background: $header-bg;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 1rem;
+    justify-content: flex-end;
+    padding: 1rem;
     
     .brand {
         display: none;
@@ -159,6 +159,7 @@ header {
     a {
         color: #fff;
         opacity: 0.75;
+        position: relative;
         transition: all 0.3s ease-out;
         
         &:hover {
@@ -201,7 +202,7 @@ header {
             -webkit-box-shadow: -0.5rem 0 0.5rem rgba(29, 30, 43,.85);
             -moz-box-shadow: -0.5rem 0 0.5rem rgba(29, 30, 43,.85);
             box-shadow: -0.5rem 0 0.5rem rgba(29, 30, 43,.85);
-            height: 100%;
+            max-height: 50%;
             width: 12.5rem;
             background: $secondary-color;
             
@@ -676,24 +677,13 @@ footer {
 
 // Mobile Menu
     
-
-    
-    
-    
-    #mobile-menu {
-        border: none;
-    }
-
-    
-    // On small devices, allow it to toggle
-    
-    // :target for non-JavaScript aria-expanded="true/false" will be for JavaScript
     
     .main-menu:target,
     .main-menu[aria-expanded="true"] {
-        display: flex;
-        right: 0;
         background: $mobile-bg;
+        display: flex;
+        max-height: 27%;
+        right: 0;
         outline: none;
         -moz-box-shadow: 0.1875rem 0 0.75rem rgba(29, 30, 43,.85);
         -webkit-box-shadow: 0.1875rem 0 0.75rem rgba(29, 30, 43,.85);
