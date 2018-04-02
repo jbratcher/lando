@@ -143,7 +143,7 @@ header {
     background: $header-bg;
     display: flex;
     justify-content: flex-end;
-    padding: 0 1rem;
+    padding: 0.5rem 1rem;
     
     .brand {
         display: none;
@@ -227,9 +227,36 @@ header {
             }
             
         }
+        
+        &:target,
+        &[aria-expanded="true"] {
+            background: $mobile-bg;
+            display: flex;
+            right: 0;
+            outline: none;
+            -moz-box-shadow: 0.1875rem 0 0.75rem rgba(29, 30, 43,.85);
+            -webkit-box-shadow: 0.1875rem 0 0.75rem rgba(29, 30, 43,.85);
+            box-shadow: 0.1875rem 0 0.75rem rgba(29, 30, 43,.85);
+        }
+        
+        &:target .menu-close,
+        &[aria-expanded="true"] .menu-close {
+          z-index: 1001;
+          background: black;
+        }
+    
+        &:target ul,
+        &[aria-expanded="true"] ul {
+            position: relative;
+            z-index: 1000;
+            background: #000;
+          
+            li:hover {
+                border: 0.0625rem solid $primary-color;
+                border-left: none;
+                border-right: none;
+            }
             
-        a#main-menu-toggle {
-            margin-left: 90%;
         }
         
         .menu-close {
@@ -610,6 +637,10 @@ footer {
         
     }
     
+    header {
+        padding: 0 1rem;
+    }
+    
     .features, .info-boxes, .team-boxes, .product {
         flex-direction: row;
     }
@@ -678,44 +709,16 @@ footer {
 // Mobile Menu
     
     
-    .main-menu:target,
-    .main-menu[aria-expanded="true"] {
-        background: $mobile-bg;
-        display: flex;
-        max-height: 50%;
-        right: 0;
-        outline: none;
-        -moz-box-shadow: 0.1875rem 0 0.75rem rgba(29, 30, 43,.85);
-        -webkit-box-shadow: 0.1875rem 0 0.75rem rgba(29, 30, 43,.85);
-        box-shadow: 0.1875rem 0 0.75rem rgba(29, 30, 43,.85);
-    }
+    
 
-    .main-menu:target .menu-close,
-    .main-menu[aria-expanded="true"] .menu-close {
-      z-index: 1001;
-      background: black;
-    }
-
-    .main-menu:target ul,
-    .main-menu[aria-expanded="true"] ul {
-        position: relative;
-        z-index: 1000;
-        background: #000;
-      
-        li:hover {
-            border: 0.0625rem solid $primary-color;
-            border-left: none;
-            border-right: none;
-        }
-        
-    }
+    
 
     // Larger screen styling
     // Horizontal menu
 
     @media (min-width: 45rem) {
         .menu-toggle,
-        .main-menu .menu-close {
+        nav .menu-close {
           display: none;
         }
   

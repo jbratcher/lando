@@ -86,7 +86,7 @@ header {
   background: linear-gradient(to bottom, #45484d 0%, black 40%);
   display: flex;
   justify-content: flex-end;
-  padding: 0 1rem; }
+  padding: 0.5rem 1rem; }
   header .brand {
     display: none;
     padding: 0 1rem;
@@ -144,8 +144,28 @@ header {
         header nav ul li a {
           padding: 1.25rem;
           display: block; }
-    header nav a#main-menu-toggle {
-      margin-left: 90%; }
+    header nav:target, header nav[aria-expanded="true"] {
+      background: linear-gradient(to bottom, #45484d 0%, black 4.3%);
+      display: flex;
+      right: 0;
+      outline: none;
+      -moz-box-shadow: 0.1875rem 0 0.75rem rgba(29, 30, 43, 0.85);
+      -webkit-box-shadow: 0.1875rem 0 0.75rem rgba(29, 30, 43, 0.85);
+      box-shadow: 0.1875rem 0 0.75rem rgba(29, 30, 43, 0.85); }
+    header nav:target .menu-close,
+    header nav[aria-expanded="true"] .menu-close {
+      z-index: 1001;
+      background: black; }
+    header nav:target ul,
+    header nav[aria-expanded="true"] ul {
+      position: relative;
+      z-index: 1000;
+      background: #000; }
+      header nav:target ul li:hover,
+      header nav[aria-expanded="true"] ul li:hover {
+        border: 0.0625rem solid #00b5f0;
+        border-left: none;
+        border-right: none; }
     header nav .menu-close {
       position: absolute;
       top: 5%;
@@ -357,6 +377,8 @@ footer {
 @media (min-width: 40rem) {
   section p {
     padding: 1rem 3rem 5rem; }
+  header {
+    padding: 0 1rem; }
   .features, .info-boxes, .team-boxes, .product {
     flex-direction: row; }
   .features .card img {
@@ -382,36 +404,9 @@ footer {
     header .brand {
       display: flex; } }
 
-.main-menu:target,
-.main-menu[aria-expanded="true"] {
-  background: linear-gradient(to bottom, #45484d 0%, black 4.3%);
-  display: flex;
-  max-height: 50%;
-  right: 0;
-  outline: none;
-  -moz-box-shadow: 0.1875rem 0 0.75rem rgba(29, 30, 43, 0.85);
-  -webkit-box-shadow: 0.1875rem 0 0.75rem rgba(29, 30, 43, 0.85);
-  box-shadow: 0.1875rem 0 0.75rem rgba(29, 30, 43, 0.85); }
-
-.main-menu:target .menu-close,
-.main-menu[aria-expanded="true"] .menu-close {
-  z-index: 1001;
-  background: black; }
-
-.main-menu:target ul,
-.main-menu[aria-expanded="true"] ul {
-  position: relative;
-  z-index: 1000;
-  background: #000; }
-  .main-menu:target ul li:hover,
-  .main-menu[aria-expanded="true"] ul li:hover {
-    border: 0.0625rem solid #00b5f0;
-    border-left: none;
-    border-right: none; }
-
 @media (min-width: 45rem) {
   .menu-toggle,
-  .main-menu .menu-close {
+  nav .menu-close {
     display: none; }
   .main-menu {
     display: flex;
