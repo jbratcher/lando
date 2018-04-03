@@ -184,8 +184,9 @@ header {
     }
     
     nav {
+        display: none;
         position: absolute;
-        right: 0;
+        right: -15rem;
         top: 0;
         height: 100%;
         overflow: hidden;
@@ -195,15 +196,18 @@ header {
         
         ul {
             display: flex;
+            flex-direction: column;
+            align-items: center;
+            top: 3.5rem;
             list-style: none;
             list-style: none;
             margin: 0;
-            /* Hide shadow while 'closed' */
+            /* Hide shadow while mobile menu is 'closed' */
             -webkit-box-shadow: -0.5rem 0 0.5rem rgba(29, 30, 43,.85);
             -moz-box-shadow: -0.5rem 0 0.5rem rgba(29, 30, 43,.85);
             box-shadow: -0.5rem 0 0.5rem rgba(29, 30, 43,.85);
             max-height: 50%;
-            width: 12.5rem;
+            width: 7.5rem;
             background: $secondary-color;
             
             li {
@@ -211,6 +215,7 @@ header {
                 border-top: none;
                 border-bottom: none;
                 transition: all 0.3s ease-in-out;
+                width: 100%;
                 
                 &:hover {
                     background: $link-bg;
@@ -221,7 +226,6 @@ header {
                 
                 a {
                     padding: 1.25rem;
-                    display: block;
                 }
                 
             }
@@ -639,6 +643,45 @@ footer {
     
     header {
         padding: 0 1rem;
+        
+        .menu-toggle,
+        nav .menu-close {
+          display: none;
+        }
+        
+        nav {
+            display: flex;
+            position: relative;
+            right: auto;
+            top: auto;
+            height: auto;
+            
+            ul {
+                flex-direction: row;
+                padding: 0;
+                -webkit-box-shadow: none;
+                   -moz-box-shadow: none;
+                        box-shadow: none;
+                height: auto;
+                width: auto;
+                background: none;
+                
+                a {
+                    color: #fff;
+                    border: 0 !important; // Remove borders from off-canvas styling
+                    transition: all 0.3s ease-out;
+                    
+                    &:hover, &:focus {
+                        background: none; // Remove background from off-canvas styling
+                        color: $primary-color;
+                      }
+                      
+                }
+  
+            }
+            
+        }
+        
     }
     
     .features, .info-boxes, .team-boxes, .product {
@@ -706,73 +749,4 @@ footer {
     
 }
 
-// Mobile Menu
     
-    
-    
-
-    
-
-    // Larger screen styling
-    // Horizontal menu
-
-    @media (min-width: 45rem) {
-        .menu-toggle,
-        nav .menu-close {
-          display: none;
-        }
-  
-        // Undo positioning of off-canvas menu
-      
-        .main-menu {
-            display: flex;
-            position: relative;
-            right: auto;
-            top: auto;
-            height: auto;
-        }
-      
-        .main-menu ul {
-    
-            // Undo off-canvas styling
-            
-            padding: 0;
-            -webkit-box-shadow: none;
-               -moz-box-shadow: none;
-                    box-shadow: none;
-            height: auto;
-            width: auto;
-            background: none;
-        }
-  
-        .main-menu a {
-            color: #fff;
-            border: 0 !important; // Remove borders from off-canvas styling
-            transition: all 0.3s ease-out;
-        }
-  
-        .main-menu a:hover,
-        .main-menu a:focus {
-            background: none; // Remove background from off-canvas styling
-            color: $primary-color;
-          }
-          
-    }
-    
-    @media (max-width: 45rem) {
-            
-        .main-menu {
-            display: none;
-            right: -15rem;
-        }    
-    
-        .main-menu ul {
-            flex-direction: column;
-            top: 3.5rem;
-            
-            li {
-                width: 100%;
-            }
-        }
-                
-    }

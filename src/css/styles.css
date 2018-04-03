@@ -112,8 +112,9 @@ header {
     header a .menu-toggle:focus {
       color: #00b5f0; }
   header nav {
+    display: none;
     position: absolute;
-    right: 0;
+    right: -15rem;
     top: 0;
     height: 100%;
     overflow: hidden;
@@ -121,21 +122,25 @@ header {
     z-index: 999; }
     header nav ul {
       display: flex;
+      flex-direction: column;
+      align-items: center;
+      top: 3.5rem;
       list-style: none;
       list-style: none;
       margin: 0;
-      /* Hide shadow while 'closed' */
+      /* Hide shadow while mobile menu is 'closed' */
       -webkit-box-shadow: -0.5rem 0 0.5rem rgba(29, 30, 43, 0.85);
       -moz-box-shadow: -0.5rem 0 0.5rem rgba(29, 30, 43, 0.85);
       box-shadow: -0.5rem 0 0.5rem rgba(29, 30, 43, 0.85);
       max-height: 50%;
-      width: 12.5rem;
+      width: 7.5rem;
       background: #1d1e2b; }
       header nav ul li {
         border: 0.0625rem solid #333;
         border-top: none;
         border-bottom: none;
-        transition: all 0.3s ease-in-out; }
+        transition: all 0.3s ease-in-out;
+        width: 100%; }
         header nav ul li:hover {
           background: linear-gradient(to top, #272a2f 0%, black 40%);
           border: 0.0625rem solid #00b5f0;
@@ -379,6 +384,31 @@ footer {
     padding: 1rem 3rem 5rem; }
   header {
     padding: 0 1rem; }
+    header .menu-toggle,
+    header nav .menu-close {
+      display: none; }
+    header nav {
+      display: flex;
+      position: relative;
+      right: auto;
+      top: auto;
+      height: auto; }
+      header nav ul {
+        flex-direction: row;
+        padding: 0;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        height: auto;
+        width: auto;
+        background: none; }
+        header nav ul a {
+          color: #fff;
+          border: 0 !important;
+          transition: all 0.3s ease-out; }
+          header nav ul a:hover, header nav ul a:focus {
+            background: none;
+            color: #00b5f0; }
   .features, .info-boxes, .team-boxes, .product {
     flex-direction: row; }
   .features .card img {
@@ -403,40 +433,3 @@ footer {
     justify-content: space-between; }
     header .brand {
       display: flex; } }
-
-@media (min-width: 45rem) {
-  .menu-toggle,
-  nav .menu-close {
-    display: none; }
-  .main-menu {
-    display: flex;
-    position: relative;
-    right: auto;
-    top: auto;
-    height: auto; }
-  .main-menu ul {
-    padding: 0;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-    height: auto;
-    width: auto;
-    background: none; }
-  .main-menu a {
-    color: #fff;
-    border: 0 !important;
-    transition: all 0.3s ease-out; }
-  .main-menu a:hover,
-  .main-menu a:focus {
-    background: none;
-    color: #00b5f0; } }
-
-@media (max-width: 45rem) {
-  .main-menu {
-    display: none;
-    right: -15rem; }
-  .main-menu ul {
-    flex-direction: column;
-    top: 3.5rem; }
-    .main-menu ul li {
-      width: 100%; } }
