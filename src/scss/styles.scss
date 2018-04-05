@@ -613,7 +613,6 @@ footer {
     
     .team-boxes .card img {
         max-width: 30vw;
-        max-height: 65vh;
     }
     
 }
@@ -621,11 +620,22 @@ footer {
 @media (min-width: 40rem) and (max-width: 60rem) {
     
     .team-boxes .card img {
-        width: 30vw;
-        height: 35vh;
+        max-width: 30vw;
+        height: 22vh;
     }
     
 }
+
+@media (min-width: 25rem) and (max-width: 40rem) {
+    
+    .team-boxes .card img {
+        max-width: 50vw;
+        max-height: 40vh;
+    }
+    
+}
+
+
 
 @media (min-width: 40rem) {
     
