@@ -38,6 +38,7 @@ section {
     text-align: center; }
   section p {
     font-family: "Source Serif Pro", serif;
+    font-size: 1.125em;
     text-align: center;
     padding: 1rem 3rem 3rem; }
   section:not(.hero):nth-child(odd) {
@@ -72,6 +73,7 @@ button {
   color: #666;
   margin: 0 1rem; }
   .card h3 {
+    font-size: 1.75em;
     color: #1d1e2b;
     padding: 0 0 1rem; }
   .card img {
@@ -108,6 +110,8 @@ header {
       line-height: 1rem;
       padding: 1rem;
       transition: all 0.3s ease-out; }
+      header a .menu-toggle .fa-bars {
+        margin-right: 1rem; }
     header a .menu-toggle:hover,
     header a .menu-toggle:focus {
       color: #00b5f0; }
@@ -168,8 +172,8 @@ header {
         border-right: none; }
     header nav .menu-close {
       position: absolute;
-      top: 1%;
-      right: 10%;
+      top: 3%;
+      right: 15%;
       background: #1d1e2b; }
     header nav .menu-close a {
       padding: 0; }
@@ -302,15 +306,17 @@ header {
     display: flex;
     flex-direction: column; }
     .team-boxes .card h3 {
+      font-size: 1.75em;
       color: #fff;
       padding: 1rem 0 0.5rem; }
     .team-boxes .card p {
+      font-size: 1.125em;
       padding: 0 0 0.5rem; }
     .team-boxes .card img {
       width: 640px;
       height: 452px;
-      max-width: 50vw;
-      max-height: 30vh;
+      max-width: 70vw;
+      max-height: 42vh;
       border-radius: 50%; }
 
 #contact form {
@@ -332,10 +338,11 @@ footer {
   align-items: center;
   background: linear-gradient(to top, #1d2025 0%, black 40%);
   color: #fff;
-  padding: 1.25rem 0.5rem; }
+  padding: 1.25rem 1rem; }
   footer a {
     color: #fff; }
   footer p {
+    font-size: 0.8em;
     text-transform: uppercase;
     align-self: center;
     padding: 1rem; }
@@ -354,11 +361,25 @@ footer {
       footer ul li i.fa:hover {
         top: 0;
         color: #00b5f0; }
+  footer i.fa-angle-up {
+    position: relative;
+    top: 0.5rem;
+    display: inline-block;
+    transform: perspective(0.0625rem) translateZ(0);
+    box-shadow: 0 0 0.0625rem transparent;
+    color: #fff;
+    animation: 3s ease-in-out 0.5s infinite forwards alternate bounceup;
+    transition: all 0.5s ease-in-out; }
+    footer i.fa-angle-up:hover, footer i.fa-angle-up:active, footer i.fa-angle-ups:focus {
+      transform: scale(1.1); }
 
 @media (min-width: 80rem) {
   .team-boxes .card img {
     max-width: 30vw;
-    max-height: 60vh; } }
+    max-height: 60vh; }
+  .product img {
+    width: 50vw;
+    height: 80vh; } }
 
 @media (min-width: 60rem) and (max-width: 80rem) {
   header {
@@ -434,3 +455,15 @@ footer {
     justify-content: space-between; }
     header .brand {
       display: flex; } }
+
+@keyframes bounceup {
+  0% {
+    transform: translateY(-0.5rem); }
+  25% {
+    transform: translateY(-1rem); }
+  50% {
+    transform: translateY(-0.5rem); }
+  75% {
+    transform: translateY(-1rem); }
+  100% {
+    transform: translateY(-0.5rem); } }

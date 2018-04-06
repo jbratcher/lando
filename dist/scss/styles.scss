@@ -69,6 +69,7 @@ section {
     
     p {
         font-family: $font-serif;
+        font-size: 1.125em;
         text-align: center;
         padding: 1rem 3rem 3rem;  
     }
@@ -119,6 +120,7 @@ button {
     margin: 0 1rem;
     
     h3 {
+        font-size: 1.75em;
         color: $secondary-color;
         padding: 0 0 1rem;
     }
@@ -174,6 +176,11 @@ header {
             line-height: 1rem;
             padding: 1rem;
             transition: all 0.3s ease-out;
+            
+            .fa-bars {
+                margin-right: 1rem;
+            }
+            
         }
         
         .menu-toggle:hover,
@@ -261,8 +268,8 @@ header {
         
         .menu-close {
             position: absolute;
-            top: 1%;
-            right: 10%;
+            top: 3%;
+            right: 15%;
             background: $secondary-color;
         }
         
@@ -488,19 +495,21 @@ header {
         flex-direction: column;
         
         h3 {
+            font-size: 1.75em;
             color: #fff;
             padding: 1rem 0 0.5rem;
         }
         
         p {
+            font-size: 1.125em;
             padding: 0 0 0.5rem;
         }
         
         img {
             width: 640px;
             height: 452px;
-            max-width: 50vw;
-            max-height: 30vh;
+            max-width: 70vw;
+            max-height: 42vh;
             border-radius: 50%;
         }
         
@@ -543,13 +552,14 @@ footer {
     align-items: center;
     background: $footer-bg;
     color: #fff;
-    padding: 1.25rem 0.5rem;
+    padding: 1.25rem 1rem;
     
     a {
         color: #fff;
     }
     
     p {
+        font-size: 0.8em;
         text-transform: uppercase;
         align-self: center;
         padding: 1rem;
@@ -581,6 +591,22 @@ footer {
         }
         
     }
+    
+    i.fa-angle-up {
+        position: relative;
+        top: 0.5rem;
+        display: inline-block;
+        transform: perspective(0.0625rem) translateZ(0);
+        box-shadow: 0 0 0.0625rem transparent;
+        color: #fff;
+        animation: 3s ease-in-out 0.5s infinite forwards alternate bounceup;
+        transition: all 0.5s ease-in-out;
+        
+        &:hover, &:active, &s:focus {
+            transform: scale(1.1);
+        }
+        
+    }
 
 }
 
@@ -595,6 +621,11 @@ footer {
     .team-boxes .card img {
         max-width: 30vw;
         max-height: 60vh;
+    }
+    
+    .product img {
+        width: 50vw;
+        height: 80vh;
     }
     
     
@@ -761,4 +792,25 @@ footer {
     
 }
 
+// Animations
+
+@keyframes bounceup {
+    
+    0% {
+        transform: translateY(-0.5rem);
+    }
+    25% {
+        transform: translateY(-1rem);
+    }
+    50% {
+        transform: translateY(-0.5rem);
+    }
+    75% {
+        transform: translateY(-1rem);
+    }
+    100% {
+        transform: translateY(-0.5rem);
+    }
+    
+}
     
