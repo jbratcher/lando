@@ -177,15 +177,15 @@ header {
             padding: 1rem;
             transition: all 0.3s ease-out;
             
-            .fa-bars {
-                margin-right: 1rem;
-            }
-            
         }
         
         .menu-toggle:hover,
         .menu-toggle:focus {
             color: $primary-color;
+        }
+        
+        #mobile-menu {
+            margin-right: 1rem;
         }
         
     }
@@ -305,7 +305,7 @@ header {
     position: relative;
     justify-content: center;
     text-align: center;
-    min-height: 80vh;
+    min-height: 70vh;
     color: #fff;
     
     & .background-image {
@@ -548,11 +548,17 @@ header {
 
 footer {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
     align-items: center;
     background: $footer-bg;
     color: #fff;
     padding: 1.25rem 1rem;
+    
+    #footer-info {
+        background: transparent;
+        display: flex;
+        justify-content: space-around;
+    }
     
     a {
         color: #fff;
