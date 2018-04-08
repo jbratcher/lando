@@ -509,7 +509,7 @@ header {
             width: 640px;
             height: 452px;
             max-width: 70vw;
-            max-height: 42vh;
+            max-height: 50vh;
             border-radius: 50%;
         }
         
@@ -630,7 +630,7 @@ footer {
     
     .team-boxes .card img {
         max-width: 30vw;
-        max-height: 60vh;
+        max-height: 62vh;
     }
     
     .product img {
@@ -654,6 +654,7 @@ footer {
     
     .team-boxes .card img {
         max-width: 30vw;
+        max-height: 30vh;
     }
     
 }
@@ -670,11 +671,21 @@ footer {
 @media (min-width: 25rem) and (max-width: 40rem) {
     
     .team-boxes .card img {
-        max-width: 50vw;
-        max-height: 40vh;
+        max-width: 70vw;
+        max-height: 55vh;
     }
     
 }
+
+@media (max-width: 20rem) {
+    
+    .team-boxes .card img {
+        max-width: 70vw;
+        max-height: 42vh;
+    }
+    
+}
+
 
 
 
