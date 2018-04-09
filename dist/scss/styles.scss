@@ -810,6 +810,20 @@ footer {
         width: 30vw;
     }
     
+    footer {
+        flex-direction: row;
+        justify-content: space-around;
+        
+        #footer-info > * {
+            margin: 0 1rem;
+        }
+        
+        a > i {
+            justify-self: end;    
+        }
+        
+    }
+    
 }
 
 // Animations

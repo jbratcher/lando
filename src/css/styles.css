@@ -466,7 +466,14 @@ footer {
   #contact form input {
     width: 30vw; }
   #contact form button {
-    width: 30vw; } }
+    width: 30vw; }
+  footer {
+    flex-direction: row;
+    justify-content: space-around; }
+    footer #footer-info > * {
+      margin: 0 1rem; }
+    footer a > i {
+      justify-self: end; } }
 
 @keyframes bounceup {
   0% {
