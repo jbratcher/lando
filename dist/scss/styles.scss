@@ -216,7 +216,8 @@ header {
                 border: 0.0625rem solid #333;
                 border-top: none;
                 border-bottom: none;
-                padding: 1rem 2rem;
+                margin: 0;
+                padding: 0;
                 transition: all 0.3s ease-in-out;
                 width: 100%;
                 
@@ -225,10 +226,17 @@ header {
                     border: 0.0625rem solid $primary-color;
                     border-top: none;
                     border-bottom: none;
+                    
+                    a {
+                        color: $primary-color;
+                        opacity: 1;
+                        text-decoration: none;
+                    }
                 }
                 
                 a {
                     display: block;
+                    padding: 1rem 1.25rem;
                 }
                 
             }
@@ -687,8 +695,6 @@ footer {
 }
 
 
-
-
 @media (min-width: 40rem) {
     
     section {
@@ -725,11 +731,11 @@ footer {
                 background: none;
                 
                 li {
-                    padding: 1rem 1.25rem;
                     
                     a {
                         color: #fff;
                         border: 0 !important; // Remove borders from off-canvas styling
+                        padding: 1rem 1.25rem;
                         transition: all 0.3s ease-out;
                         
                         &:hover, &:focus {
