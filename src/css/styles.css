@@ -1,7 +1,6 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
 html, body {
@@ -18,7 +17,7 @@ a {
 
 img {
   opacity: 0.75;
-  transition: all 0.3s ease-in-out; }
+  transition: all 0.5s ease-in-out; }
   img:hover {
     opacity: 1; }
 
