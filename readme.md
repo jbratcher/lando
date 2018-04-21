@@ -7,8 +7,7 @@ Lando is a multipurpose landing page template made with pure HTML and CSS.
 Lando offers a lot of punch using only HTML and CSS.
 
 * Fully repsonsive design
-* Lots of psuedo-class effects
-* Javascript optional
+* Lots of psuedo-class effects and animations
 
 ### Dependencies
 
