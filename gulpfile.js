@@ -1,18 +1,14 @@
 // Require dependencies
-// Gulp, BrowserSync, SASS, useref with gulpif to bundle and minify CSS adn JS, CSS autoprefixer, Imagemin to optimize images, cache to reduce reload, del to remove(clean) the dist directory
 
 const gulp          = require('gulp');
-const pump          = require('pump');
 const browserSync   = require('browser-sync').create();
 const sass          = require('gulp-sass');
 const useref        = require('gulp-useref');
-const uglify        = require('gulp-uglify');
 const gulpIf        = require('gulp-if');
 const cssnano       = require('gulp-cssnano');
 const imagemin      = require('gulp-imagemin');
 const cache         = require('gulp-cache');
 const autoprefixer  = require('gulp-autoprefixer');
-const babel         = require('gulp-babel');
 const del           = require('del');
 
 // Move vendor files from node modules to src folders
@@ -81,10 +77,6 @@ gulp.task('browserSync', gulp.parallel('sass', function() {
 gulp.task('useref', () =>
   gulp.src('*.html')
     .pipe(useref())
-    .pipe(gulpIf('*.js', babel({
-            presets: ['env']
-          })))
-    .pipe(gulpIf('*.js', uglify()))
     .pipe(gulpIf('*.css', cssnano()))
     .pipe(gulp.dest('dist'))
 );

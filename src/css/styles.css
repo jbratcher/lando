@@ -321,7 +321,7 @@ header {
       width: 640px;
       height: 452px;
       max-width: 70vw;
-      max-height: 50vh;
+      max-height: 40vh;
       border-radius: 50%; }
 
 #contact form {
@@ -399,22 +399,22 @@ footer {
       display: block; }
   .team-boxes .card img {
     max-width: 30vw;
-    max-height: 30vh; } }
+    max-height: 45vh; } }
 
 @media (min-width: 40rem) and (max-width: 60rem) {
   .team-boxes .card img {
     max-width: 30vw;
-    height: 22vh; } }
+    max-height: 35vh; } }
 
 @media (min-width: 25rem) and (max-width: 40rem) {
   .team-boxes .card img {
     max-width: 70vw;
-    max-height: 55vh; } }
+    max-height: 40vh; } }
 
 @media (max-width: 20rem) {
   .team-boxes .card img {
     max-width: 70vw;
-    max-height: 42vh; } }
+    max-height: 32vh; } }
 
 @media (min-width: 40rem) {
   section p {
