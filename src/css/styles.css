@@ -1,7 +1,7 @@
 * {
+  box-sizing: border-box;
   margin: 0;
-  padding: 0;
-  box-sizing: border-box; }
+  padding: 0; }
 
 html, body {
   font-family: "Source Sans Pro", sans-serif;
@@ -48,15 +48,17 @@ section {
     color: #fefefe; }
 
 button {
-  position: relative;
-  top: 0;
+  background: radial-gradient(at top right, #646894 0%, #1d1e2b 100%);
+  border: 0.125rem solid #999;
+  border-radius: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
   margin: 1rem;
   padding: 1rem;
-  border-radius: 1rem;
-  text-transform: uppercase;
-  font-weight: bold;
+  position: relative;
   text-align: center;
-  background: radial-gradient(at top right, #646894 0%, #1d1e2b 100%);
+  text-transform: uppercase;
+  top: 0;
   transition: all 0.5s ease-in-out; }
   button a {
     color: #fff; }
@@ -66,17 +68,18 @@ button {
       text-decoration: none; }
 
 .card {
+  color: #666;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  color: #666;
-  margin: 0 1rem; }
+  margin: 1rem; }
   .card h3 {
     font-size: 1.75em;
     color: #1d1e2b;
-    padding: 0 0 1rem; }
+    padding: 0 0 0.5rem; }
+  .card p {
+    padding: 0 0 1.5rem; }
   .card img {
-    padding: 1rem;
     border-radius: 30%;
     transition: all 0.8s ease-out; }
     .card img:hover {
@@ -309,14 +312,13 @@ header {
   justify-content: space-around; }
   .team-boxes .card {
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    width: 100vw; }
     .team-boxes .card h3 {
       font-size: 1.75em;
-      color: #fff;
-      padding: 1rem 0 0.5rem; }
+      color: #fff; }
     .team-boxes .card p {
-      font-size: 1.125em;
-      padding: 0 0 0.5rem; }
+      font-size: 1.125em; }
     .team-boxes .card img {
       width: 640px;
       height: 452px;
