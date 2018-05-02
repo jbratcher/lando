@@ -451,6 +451,8 @@ footer {
             color: #00b5f0; }
   .features, .info-boxes, .team-boxes, .product {
     flex-direction: row; }
+  .team-boxes .card {
+    width: 30vw; }
   .features .card img {
     width: 30vw; }
   .product .product-1 .product-text {
