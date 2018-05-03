@@ -499,13 +499,14 @@ header {
 
 .team-boxes {
     display: flex;
-    flex-flow: column wrap;
-    justify-content: space-around;
+    flex-flow: column nowrap;
+    align-items: center;
     
     .card {
         display: flex;
         flex-direction: column;
-        width: 100vw;
+        padding: 1rem;
+        width: 100%;
         
         h3 {
             font-size: 1.75em;
@@ -517,10 +518,10 @@ header {
         }
         
         img {
-            width: 640px;
-            height: 452px;
-            max-width: 70vw;
-            max-height: 40vh;
+            width: 160px;
+            height: 113px;
+            max-width: 100%;
+            height: 30vh;
             border-radius: 50%;
         }
         
@@ -640,8 +641,9 @@ footer {
 @media (min-width: 80rem) {
     
     .team-boxes .card img {
-        max-width: 30vw;
-        max-height: 62vh;
+        width: 320px;
+        height: 226px;
+        height: 50vh;
     }
     
     .product img {
@@ -663,40 +665,7 @@ footer {
         }
     }
     
-    .team-boxes .card img {
-        max-width: 30vw;
-        max-height: 45vh;
-    }
-    
 }
-
-@media (min-width: 40rem) and (max-width: 60rem) {
-    
-    .team-boxes .card img {
-        max-width: 30vw;
-        max-height: 35vh;
-    }
-    
-}
-
-@media (min-width: 25rem) and (max-width: 40rem) {
-    
-    .team-boxes .card img {
-        max-width: 70vw;
-        max-height: 40vh;
-    }
-    
-}
-
-@media (max-width: 20rem) {
-    
-    .team-boxes .card img {
-        max-width: 70vw;
-        max-height: 32vh;
-    }
-    
-}
-
 
 @media (min-width: 40rem) {
     
@@ -757,8 +726,13 @@ footer {
         
     }
     
-    .features, .info-boxes, .team-boxes, .product {
+    .features, .info-boxes, .product {
         flex-direction: row;
+    }
+    
+    .team-boxes {
+        flex-flow: row wrap;
+        justify-content: space-around;
     }
     
     .team-boxes .card {
