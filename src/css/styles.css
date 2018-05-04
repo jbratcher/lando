@@ -28,10 +28,10 @@ h5 {
   font-size: 2em; }
 
 section {
+  color: #eee;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  color: #eee;
   padding: 5rem 1rem; }
   section h2 {
     text-align: center; }
@@ -74,8 +74,8 @@ button {
   align-items: center;
   margin: 1rem; }
   .card h3 {
-    font-size: 1.75em;
     color: #1d1e2b;
+    font-size: 1.75em;
     padding: 0 0 0.5rem; }
   .card p {
     padding: 0 0 1.5rem; }
@@ -158,12 +158,11 @@ header {
           padding: 1rem 1.25rem; }
     header nav:target, header nav[aria-expanded="true"] {
       background: linear-gradient(to bottom, #45484d 0%, black 4.3%);
+      box-shadow: 0.1875rem 0 0.75rem rgba(29, 30, 43, 0.85);
       display: flex;
-      right: 0;
       outline: none;
-      -moz-box-shadow: 0.1875rem 0 0.75rem rgba(29, 30, 43, 0.85);
-      -webkit-box-shadow: 0.1875rem 0 0.75rem rgba(29, 30, 43, 0.85);
-      box-shadow: 0.1875rem 0 0.75rem rgba(29, 30, 43, 0.85); }
+      right: 0;
+      width: 30vw; }
     header nav:target .menu-close,
     header nav[aria-expanded="true"] .menu-close {
       z-index: 1001;
@@ -412,23 +411,21 @@ footer {
       display: none; }
     header nav {
       display: flex;
+      height: auto;
       position: relative;
       right: auto;
-      top: auto;
-      height: auto; }
+      top: auto; }
       header nav ul {
-        flex-direction: row;
-        padding: 0;
-        -webkit-box-shadow: none;
-        -moz-box-shadow: none;
+        background: none;
         box-shadow: none;
+        flex-direction: row;
         height: auto;
-        width: auto;
-        background: none; }
+        padding: 0;
+        width: auto; }
         header nav ul li a {
-          color: #fff;
-          border: 0 !important;
+          border: 0;
           padding: 1rem 1.25rem;
+          color: #fff;
           transition: all 0.3s ease-out; }
           header nav ul li a:hover, header nav ul li a:focus {
             background: none;

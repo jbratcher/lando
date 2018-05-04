@@ -1,4 +1,8 @@
+/////////////////
+
 // Variables
+
+/////////////////
 
 $primary-color: #00b5f0;
 $secondary-color: #1d1e2b;
@@ -12,7 +16,11 @@ $link-bg: linear-gradient(to top, rgba(39,42,47,1) 0%,rgba(0,0,0,1) 40%);
 $button-bg: radial-gradient(at top right, rgba(100, 104, 148,1) 0%,rgba(29, 30, 43,1) 100%); 
 $mobile-bg: linear-gradient(to bottom, rgba(69,72,77,1) 0%,rgba(0,0,0,1) 4.3%);
 
-//Global
+/////////////////
+
+// Global
+
+/////////////////
 
 * {
     box-sizing: border-box;
@@ -56,10 +64,10 @@ h5 {
 }
 
 section {
+    color: #eee;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    color: #eee;
     padding: 5rem 1rem;
     
     h2 {
@@ -121,8 +129,8 @@ button {
     margin: 1rem;
     
     h3 {
-        font-size: 1.75em;
         color: $secondary-color;
+        font-size: 1.75em;
         padding: 0 0 0.5rem;
     }
     
@@ -140,9 +148,13 @@ button {
         
     }
         
-}
+}  
+
+//////////////////////
 
 // Header Section
+
+//////////////////////
 
 header {
     align-items: center;
@@ -250,12 +262,11 @@ header {
         &:target,
         &[aria-expanded="true"] {
             background: $mobile-bg;
-            display: flex;
-            right: 0;
-            outline: none;
-            -moz-box-shadow: 0.1875rem 0 0.75rem rgba(29, 30, 43,.85);
-            -webkit-box-shadow: 0.1875rem 0 0.75rem rgba(29, 30, 43,.85);
             box-shadow: 0.1875rem 0 0.75rem rgba(29, 30, 43,.85);
+            display: flex;
+            outline: none;
+            right: 0;
+            width: 30vw;
         }
         
         &:target .menu-close,
@@ -310,7 +321,11 @@ header {
     
 }
 
+/////////////////
+
 // Hero Section
+
+/////////////////
 
 .hero {
     display: flex;
@@ -365,7 +380,11 @@ header {
     
 }
 
+/////////////////
+
 // About Section
+
+/////////////////
 
 .features, .info-boxes {
     width: 100vw;
@@ -404,8 +423,11 @@ header {
             
 }
 
+/////////////////
 
 // Info Section
+
+/////////////////
 
 #info {
     
@@ -441,7 +463,11 @@ header {
     
 }
 
+///////////////////
+
 // Product Section
+
+///////////////////
 
 .product {
     display: flex;
@@ -489,13 +515,15 @@ header {
     margin: 1rem;
 }
 
-
-
 .product:nth-of-type(2) {
        margin-top: 3em;
    }
-   
-//  Team Section
+
+/////////////////  
+
+// Team Section
+
+/////////////////
 
 .team-boxes {
     display: flex;
@@ -530,7 +558,11 @@ header {
     
 }
 
-// Contact
+///////////////////
+
+// Contact Section
+
+///////////////////
 
 #contact {
     
@@ -560,7 +592,11 @@ header {
     
 } 
 
-//Footer
+///////////////////
+
+// Footer Section
+
+///////////////////
 
 footer {
     display: flex;
@@ -687,31 +723,29 @@ footer {
         
         nav {
             display: flex;
+            height: auto;
             position: relative;
             right: auto;
             top: auto;
-            height: auto;
             
             ul {
-                flex-direction: row;
-                padding: 0;
-                -webkit-box-shadow: none;
-                   -moz-box-shadow: none;
-                        box-shadow: none;
-                height: auto;
-                width: auto;
                 background: none;
+                box-shadow: none;
+                flex-direction: row;
+                height: auto;
+                padding: 0;
+                width: auto;
                 
                 li {
                     
                     a {
-                        color: #fff;
-                        border: 0 !important; // Remove borders from off-canvas styling
+                        border: 0; // Remove borders from off-canvas styling
                         padding: 1rem 1.25rem;
+                        color: #fff;
                         transition: all 0.3s ease-out;
                         
                         &:hover, &:focus {
-                            background: none; // Remove background from off-canvas styling
+                            background: none;
                             color: $primary-color;
                           }
                           
