@@ -165,54 +165,54 @@ header {
       width: 30vw; }
     header nav:target .menu-close,
     header nav[aria-expanded="true"] .menu-close {
-      z-index: 1001;
-      background: black; }
+      background: black;
+      z-index: 1001; }
     header nav:target ul,
     header nav[aria-expanded="true"] ul {
+      background: #000;
       position: relative;
-      z-index: 1000;
-      background: #000; }
+      z-index: 1000; }
       header nav:target ul li:hover,
       header nav[aria-expanded="true"] ul li:hover {
         border: 0.0625rem solid #00b5f0;
         border-left: none;
         border-right: none; }
     header nav .menu-close {
+      background: #1d1e2b;
       position: absolute;
       top: 3%;
-      right: 15%;
-      background: #1d1e2b; }
+      right: 15%; }
     header nav .menu-close a {
       padding: 0; }
     header nav i {
       color: #00b5f0;
       opacity: 1; }
   header .sr-only {
-    position: absolute;
-    width: 0.625rem;
-    height: 0.625rem;
+    border: 0;
+    clip: rect(0, 0, 0, 0);
     padding: 0;
     margin: -0.625rem;
+    position: absolute;
     overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0; }
+    width: 0.625rem;
+    height: 0.625rem; }
 
 .hero {
+  color: #fff;
   display: flex;
-  position: relative;
   justify-content: center;
-  text-align: center;
   min-height: 70vh;
-  color: #fff; }
+  position: relative;
+  text-align: center; }
   .hero .background-image {
+    background: center center cover;
+    opacity: 1;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: center center cover;
-    z-index: -1;
-    opacity: 1; }
+    z-index: -1; }
 
 .hero-content {
   display: flex;
@@ -222,8 +222,8 @@ header {
   .hero-content h2, .hero-content h5 {
     text-shadow: 0 0.125rem 0.125rem #333; }
   .hero-content h2 {
-    text-transform: uppercase;
-    margin-bottom: 1rem; }
+    margin-bottom: 1rem;
+    text-transform: uppercase; }
   .hero-content h5 {
     margin-bottom: 2.5rem;
     text-shadow: 1px 1px 15px #000; }
@@ -234,25 +234,25 @@ header {
       cursor: pointer; }
 
 .features, .info-boxes {
-  width: 100vw;
   display: flex;
   flex-direction: column;
-  justify-content: space-around; }
+  justify-content: space-around;
+  width: 100vw; }
 
 .features .card {
+  color: #1d1e2b;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  color: #1d1e2b;
   margin: 0 1rem; }
   .features .card h3 {
     color: #1d1e2b;
     padding: 0 0 1rem; }
   .features .card img {
-    width: 85vw;
-    padding: 1rem;
     border-radius: 30%;
-    transition: all 0.8s ease-out; }
+    padding: 1rem;
+    transition: all 0.8s ease-out;
+    width: 85vw; }
     .features .card img:hover {
       transform: scale(1.1); }
 
@@ -279,19 +279,19 @@ header {
   justify-content: center;
   align-items: center; }
   .product img {
-    padding: 0;
-    margin: 0.25em 0.5em;
     border-radius: 3rem;
+    margin: 0.25em 0.5em;
+    padding: 0;
     width: 100%;
     max-width: 90vw;
     height: 40vh; }
   .product .product-text h3 {
-    font-size: 1.5em;
     color: #1d1e2b;
+    font-size: 1.5em;
     text-align: center; }
   .product .product-text p {
-    text-align: left;
-    padding-bottom: 0.5rem; }
+    padding-bottom: 0.5rem;
+    text-align: left; }
     .product .product-text p:last-of-type {
       padding-bottom: 2rem; }
 
@@ -299,8 +299,8 @@ header {
   order: 0; }
 
 .product-1 img {
-  order: 1;
-  margin: 1rem; }
+  margin: 1rem;
+  order: 1; }
 
 .product:nth-of-type(2) {
   margin-top: 3em; }
@@ -315,38 +315,36 @@ header {
     padding: 1rem;
     width: 100%; }
     .team-boxes .card h3 {
-      font-size: 1.75em;
-      color: #fff; }
+      color: #fff;
+      font-size: 1.75em; }
     .team-boxes .card p {
       font-size: 1.125em; }
     .team-boxes .card img {
+      border-radius: 50%;
       width: 160px;
-      height: 113px;
       max-width: 100%;
-      height: 30vh;
-      border-radius: 50%; }
+      height: 113px;
+      height: 30vh; }
 
 #contact form {
   display: flex;
   flex-direction: column;
   align-items: center; }
   #contact form input {
-    padding: 1rem;
     border-radius: 1rem;
-    color: #555; }
+    color: #555;
+    padding: 1rem; }
   #contact form button {
     width: 100%; }
   #contact form button:hover {
-    webkit-box-shadow: 0 0 4px #303;
-    -moz-box-shadow: 0 0 4px #303;
     box-shadow: 0 0.5rem 0.75rem #303; }
 
 footer {
+  background: linear-gradient(to top, #1d2025 0%, black 40%);
+  color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: linear-gradient(to top, #1d2025 0%, black 40%);
-  color: #fff;
   padding: 1.25rem 1rem; }
   footer #footer-info {
     background: transparent;
@@ -355,16 +353,16 @@ footer {
   footer a {
     color: #fff; }
   footer p {
-    font-size: 0.8em;
-    text-transform: uppercase;
     align-self: center;
-    padding: 1rem; }
+    font-size: 0.8em;
+    padding: 1rem;
+    text-transform: uppercase; }
   footer p a {
     color: #00b5f0; }
   footer ul {
     display: flex;
-    padding: 1rem;
-    list-style: none; }
+    list-style: none;
+    padding: 1rem; }
   footer ul li {
     margin-left: 1rem; }
     footer ul li i.fa {
@@ -372,16 +370,16 @@ footer {
       top: 0.2rem;
       transition: all 0.5s linear; }
       footer ul li i.fa:hover {
-        top: 0;
-        color: #00b5f0; }
+        color: #00b5f0;
+        top: 0; }
   footer i.fa-angle-up {
-    position: relative;
-    top: 0.5rem;
-    display: inline-block;
-    transform: perspective(0.0625rem) translateZ(0);
+    animation: 3s ease-in-out 0.5s infinite forwards alternate bounceup;
     box-shadow: 0 0 0.0625rem transparent;
     color: #fff;
-    animation: 3s ease-in-out 0.5s infinite forwards alternate bounceup;
+    display: inline-block;
+    position: relative;
+    top: 0.5rem;
+    transform: perspective(0.0625rem) translateZ(0);
     transition: all 0.5s ease-in-out; }
     footer i.fa-angle-up:hover, footer i.fa-angle-up:active, footer i.fa-angle-ups:focus {
       transform: scale(1.1); }
@@ -413,19 +411,19 @@ footer {
       display: flex;
       height: auto;
       position: relative;
-      right: auto;
-      top: auto; }
+      top: auto;
+      right: auto; }
       header nav ul {
         background: none;
         box-shadow: none;
         flex-direction: row;
-        height: auto;
         padding: 0;
-        width: auto; }
+        width: auto;
+        height: auto; }
         header nav ul li a {
           border: 0;
-          padding: 1rem 1.25rem;
           color: #fff;
+          padding: 1rem 1.25rem;
           transition: all 0.3s ease-out; }
           header nav ul li a:hover, header nav ul li a:focus {
             background: none;

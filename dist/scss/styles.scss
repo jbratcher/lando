@@ -1,4 +1,8 @@
+/////////////////
+
 // Variables
+
+/////////////////
 
 $primary-color: #00b5f0;
 $secondary-color: #1d1e2b;
@@ -12,7 +16,11 @@ $link-bg: linear-gradient(to top, rgba(39,42,47,1) 0%,rgba(0,0,0,1) 40%);
 $button-bg: radial-gradient(at top right, rgba(100, 104, 148,1) 0%,rgba(29, 30, 43,1) 100%); 
 $mobile-bg: linear-gradient(to bottom, rgba(69,72,77,1) 0%,rgba(0,0,0,1) 4.3%);
 
-//Global
+/////////////////
+
+// Global
+
+/////////////////
 
 * {
     box-sizing: border-box;
@@ -56,10 +64,10 @@ h5 {
 }
 
 section {
+    color: #eee;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    color: #eee;
     padding: 5rem 1rem;
     
     h2 {
@@ -121,8 +129,8 @@ button {
     margin: 1rem;
     
     h3 {
-        font-size: 1.75em;
         color: $secondary-color;
+        font-size: 1.75em;
         padding: 0 0 0.5rem;
     }
     
@@ -140,9 +148,13 @@ button {
         
     }
         
-}
+}  
+
+//////////////////////
 
 // Header Section
+
+//////////////////////
 
 header {
     align-items: center;
@@ -250,25 +262,24 @@ header {
         &:target,
         &[aria-expanded="true"] {
             background: $mobile-bg;
-            display: flex;
-            right: 0;
-            outline: none;
-            -moz-box-shadow: 0.1875rem 0 0.75rem rgba(29, 30, 43,.85);
-            -webkit-box-shadow: 0.1875rem 0 0.75rem rgba(29, 30, 43,.85);
             box-shadow: 0.1875rem 0 0.75rem rgba(29, 30, 43,.85);
+            display: flex;
+            outline: none;
+            right: 0;
+            width: 30vw;
         }
         
         &:target .menu-close,
         &[aria-expanded="true"] .menu-close {
-          z-index: 1001;
-          background: black;
+            background: black;
+            z-index: 1001;
         }
     
         &:target ul,
         &[aria-expanded="true"] ul {
+            background: #000;
             position: relative;
             z-index: 1000;
-            background: #000;
           
             li:hover {
                 border: 0.0625rem solid $primary-color;
@@ -279,10 +290,10 @@ header {
         }
         
         .menu-close {
+            background: $secondary-color;
             position: absolute;
             top: 3%;
             right: 15%;
-            background: $secondary-color;
         }
         
         .menu-close a {
@@ -298,37 +309,41 @@ header {
     }
     
     .sr-only {
-        position: absolute;
-        width: 0.625rem;
-        height: 0.625rem;
+        border: 0;
+        clip: rect(0,0,0,0);
         padding: 0;
         margin: -0.625rem;
+        position: absolute;
         overflow: hidden;
-        clip: rect(0,0,0,0);
-        border: 0;
+        width: 0.625rem;
+        height: 0.625rem;
     }
     
 }
 
+/////////////////
+
 // Hero Section
 
+/////////////////
+
 .hero {
-    display: flex;
-    position: relative;
-    justify-content: center;
-    text-align: center;
-    min-height: 70vh;
     color: #fff;
+    display: flex;
+    justify-content: center;
+    min-height: 70vh;
+    position: relative;
+    text-align: center;
     
     & .background-image {
+        background: center center cover;
+        opacity: 1;
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background: center center cover;
         z-index: -1;
-        opacity: 1;
     }
     
 }
@@ -344,8 +359,8 @@ header {
     }
     
     h2 {
-        text-transform: uppercase;
         margin-bottom: 1rem;
+        text-transform: uppercase;
     }
     
     h5 {
@@ -365,22 +380,26 @@ header {
     
 }
 
+/////////////////
+
 // About Section
 
+/////////////////
+
 .features, .info-boxes {
-    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    width: 100vw;
 }
 
 .features {
     
     .card {
+        color: $secondary-color;
         display: flex;
         flex-flow: column nowrap;
         align-items: center;
-        color: $secondary-color;
         margin: 0 1rem;
         
         h3 {
@@ -389,10 +408,10 @@ header {
         }
         
         img {
-            width: 85vw;
-            padding: 1rem;
             border-radius: 30%;
+            padding: 1rem;
             transition: all 0.8s ease-out;
+            width: 85vw;
             
             &:hover {
                 transform: scale(1.1);
@@ -404,8 +423,11 @@ header {
             
 }
 
+/////////////////
 
 // Info Section
+
+/////////////////
 
 #info {
     
@@ -441,7 +463,11 @@ header {
     
 }
 
+///////////////////
+
 // Product Section
+
+///////////////////
 
 .product {
     display: flex;
@@ -450,9 +476,9 @@ header {
     align-items: center;
     
     img {
-        padding: 0;
-        margin: 0.25em 0.5em;
         border-radius: 3rem;
+        margin: 0.25em 0.5em;
+        padding: 0;
         width: 100%;
         max-width: 90vw;
         height: 40vh;
@@ -461,14 +487,14 @@ header {
     .product-text {
         
         h3 {
-            font-size: 1.5em;
             color: $secondary-color;
+            font-size: 1.5em;
             text-align: center;
         }
         
         p {
-            text-align: left;
             padding-bottom: 0.5rem;
+            text-align: left;
             
             &:last-of-type {
                 padding-bottom: 2rem;
@@ -485,31 +511,34 @@ header {
 }
 
 .product-1 img {
-    order: 1;
     margin: 1rem;
+    order: 1;
 }
 
-
-
 .product:nth-of-type(2) {
-       margin-top: 3em;
-   }
-   
-//  Team Section
+    margin-top: 3em;
+}
+
+/////////////////  
+
+// Team Section
+
+/////////////////
 
 .team-boxes {
     display: flex;
-    flex-flow: column wrap;
-    justify-content: space-around;
+    flex-flow: column nowrap;
+    align-items: center;
     
     .card {
         display: flex;
         flex-direction: column;
-        width: 100vw;
+        padding: 1rem;
+        width: 100%;
         
         h3 {
-            font-size: 1.75em;
             color: #fff;
+            font-size: 1.75em;
         }
         
         p {
@@ -517,11 +546,11 @@ header {
         }
         
         img {
-            width: 640px;
-            height: 452px;
-            max-width: 70vw;
-            max-height: 40vh;
             border-radius: 50%;
+            width: 160px;
+            max-width: 100%;
+            height: 113px;
+            height: 30vh;
         }
         
     }
@@ -529,20 +558,23 @@ header {
     
 }
 
-// Contact
+///////////////////
+
+// Contact Section
+
+///////////////////
 
 #contact {
     
     form {
-        
         display: flex;
         flex-direction: column;
         align-items: center;
         
         input {
-            padding: 1rem;
             border-radius: 1rem;
             color: #555;
+            padding: 1rem;
         }
         
         button {
@@ -550,8 +582,6 @@ header {
         }
         
         button:hover {
-            webkit-box-shadow: 0 0 4px #303;
-            -moz-box-shadow: 0 0 4px #303;
             box-shadow: 0 0.5rem 0.75rem #303;
         }
     
@@ -559,14 +589,18 @@ header {
     
 } 
 
-//Footer
+///////////////////
+
+// Footer Section
+
+///////////////////
 
 footer {
+    background: $footer-bg;
+    color: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: $footer-bg;
-    color: #fff;
     padding: 1.25rem 1rem;
     
     #footer-info {
@@ -580,10 +614,10 @@ footer {
     }
     
     p {
-        font-size: 0.8em;
-        text-transform: uppercase;
         align-self: center;
+        font-size: 0.8em;
         padding: 1rem;
+        text-transform: uppercase;
     }
     
     p a {
@@ -592,8 +626,8 @@ footer {
     
     ul {
         display: flex;
-        padding: 1rem;
         list-style: none;
+        padding: 1rem;
     }
     
     ul li {
@@ -605,8 +639,8 @@ footer {
             transition: all 0.5s linear;
             
             &:hover {
-                top: 0;
                 color: $primary-color;
+                top: 0;
             }
             
         }
@@ -614,13 +648,13 @@ footer {
     }
     
     i.fa-angle-up {
-        position: relative;
-        top: 0.5rem;
-        display: inline-block;
-        transform: perspective(0.0625rem) translateZ(0);
+        animation: 3s ease-in-out 0.5s infinite forwards alternate bounceup;
         box-shadow: 0 0 0.0625rem transparent;
         color: #fff;
-        animation: 3s ease-in-out 0.5s infinite forwards alternate bounceup;
+        display: inline-block;
+        position: relative;
+        top: 0.5rem;
+        transform: perspective(0.0625rem) translateZ(0);
         transition: all 0.5s ease-in-out;
         
         &:hover, &:active, &s:focus {
@@ -640,8 +674,9 @@ footer {
 @media (min-width: 80rem) {
     
     .team-boxes .card img {
-        max-width: 30vw;
-        max-height: 62vh;
+        width: 320px;
+        height: 226px;
+        height: 50vh;
     }
     
     .product img {
@@ -663,40 +698,7 @@ footer {
         }
     }
     
-    .team-boxes .card img {
-        max-width: 30vw;
-        max-height: 45vh;
-    }
-    
 }
-
-@media (min-width: 40rem) and (max-width: 60rem) {
-    
-    .team-boxes .card img {
-        max-width: 30vw;
-        max-height: 35vh;
-    }
-    
-}
-
-@media (min-width: 25rem) and (max-width: 40rem) {
-    
-    .team-boxes .card img {
-        max-width: 70vw;
-        max-height: 40vh;
-    }
-    
-}
-
-@media (max-width: 20rem) {
-    
-    .team-boxes .card img {
-        max-width: 70vw;
-        max-height: 32vh;
-    }
-    
-}
-
 
 @media (min-width: 40rem) {
     
@@ -718,31 +720,29 @@ footer {
         
         nav {
             display: flex;
-            position: relative;
-            right: auto;
-            top: auto;
             height: auto;
+            position: relative;
+            top: auto;
+            right: auto;
             
             ul {
+                background: none;
+                box-shadow: none;
                 flex-direction: row;
                 padding: 0;
-                -webkit-box-shadow: none;
-                   -moz-box-shadow: none;
-                        box-shadow: none;
-                height: auto;
                 width: auto;
-                background: none;
+                height: auto;
                 
                 li {
                     
                     a {
+                        border: 0;
                         color: #fff;
-                        border: 0 !important; // Remove borders from off-canvas styling
                         padding: 1rem 1.25rem;
                         transition: all 0.3s ease-out;
                         
                         &:hover, &:focus {
-                            background: none; // Remove background from off-canvas styling
+                            background: none;
                             color: $primary-color;
                           }
                           
@@ -750,15 +750,23 @@ footer {
                     
                 }
                 
-  
             }
             
         }
         
     }
     
-    .features, .info-boxes, .team-boxes, .product {
+    .features, .info-boxes, .product {
         flex-direction: row;
+    }
+    
+    .team-boxes {
+        flex-flow: row wrap;
+        justify-content: space-around;
+    }
+    
+    .team-boxes .card {
+        width: 30vw;
     }
     
     .features .card img {
