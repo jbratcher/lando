@@ -157,10 +157,10 @@ button {
 //////////////////////
 
 header {
-    align-items: center;
     background: $header-bg;
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     padding: 0.5rem 0;
     
     .brand {
@@ -207,13 +207,13 @@ header {
     }
     
     nav {
-        display: none;
-        position: absolute;
+        display: flex;
+        position: fixed;
         right: -15rem;
         top: 0;
         overflow: hidden;
-        transition: left 0.3s ease,
-        box-shadow 0.3s ease;
+        transition: all 0.5s ease;
+        width: 0;
         z-index: 999;
         
         ul {
@@ -222,11 +222,11 @@ header {
             display: flex;
             flex-direction: column;
             align-items: center;
-            height: 100%;
-            list-style: none;
             list-style: none;
             margin: 0;
             padding: 3rem 0 1rem;
+            width: 0;
+            transition: all 0.5s ease;
             
             li {
                 border: 0.0625rem solid #333;
@@ -235,7 +235,6 @@ header {
                 margin: 0;
                 padding: 0;
                 transition: all 0.3s ease-in-out;
-                width: 100%;
                 
                 &:hover {
                     background: $link-bg;
@@ -263,10 +262,9 @@ header {
         &[aria-expanded="true"] {
             background: $mobile-bg;
             box-shadow: 0.1875rem 0 0.75rem rgba(29, 30, 43,.85);
-            display: flex;
             outline: none;
             right: 0;
-            width: 30vw;
+            width: 100vw;
         }
         
         &:target .menu-close,
@@ -280,11 +278,17 @@ header {
             background: #000;
             position: relative;
             z-index: 1000;
-          
-            li:hover {
-                border: 0.0625rem solid $primary-color;
-                border-left: none;
-                border-right: none;
+            width: 100%;
+            
+            li {
+                border: none;
+                
+                &:hover {
+                    border: 0.0625rem solid $primary-color;
+                    border-left: none;
+                    border-right: none;
+                }
+                
             }
             
         }
@@ -293,7 +297,7 @@ header {
             background: $secondary-color;
             position: absolute;
             top: 3%;
-            right: 15%;
+            right: 5%;
         }
         
         .menu-close a {

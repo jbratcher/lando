@@ -86,10 +86,10 @@ button {
       transform: scale(1.1); }
 
 header {
-  align-items: center;
   background: linear-gradient(to bottom, #45484d 0%, black 40%);
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   padding: 0.5rem 0; }
   header .brand {
     display: none;
@@ -118,12 +118,13 @@ header {
     header a #mobile-menu {
       margin-right: 1rem; }
   header nav {
-    display: none;
-    position: absolute;
+    display: flex;
+    position: fixed;
     right: -15rem;
     top: 0;
     overflow: hidden;
-    transition: left 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.5s ease;
+    width: 0;
     z-index: 999; }
     header nav ul {
       background: #1d1e2b;
@@ -131,19 +132,18 @@ header {
       display: flex;
       flex-direction: column;
       align-items: center;
-      height: 100%;
-      list-style: none;
       list-style: none;
       margin: 0;
-      padding: 3rem 0 1rem; }
+      padding: 3rem 0 1rem;
+      width: 0;
+      transition: all 0.5s ease; }
       header nav ul li {
         border: 0.0625rem solid #333;
         border-top: none;
         border-bottom: none;
         margin: 0;
         padding: 0;
-        transition: all 0.3s ease-in-out;
-        width: 100%; }
+        transition: all 0.3s ease-in-out; }
         header nav ul li:hover {
           background: linear-gradient(to top, #272a2f 0%, black 40%);
           border: 0.0625rem solid #00b5f0;
@@ -159,10 +159,9 @@ header {
     header nav:target, header nav[aria-expanded="true"] {
       background: linear-gradient(to bottom, #45484d 0%, black 4.3%);
       box-shadow: 0.1875rem 0 0.75rem rgba(29, 30, 43, 0.85);
-      display: flex;
       outline: none;
       right: 0;
-      width: 30vw; }
+      width: 100vw; }
     header nav:target .menu-close,
     header nav[aria-expanded="true"] .menu-close {
       background: black;
@@ -171,17 +170,21 @@ header {
     header nav[aria-expanded="true"] ul {
       background: #000;
       position: relative;
-      z-index: 1000; }
-      header nav:target ul li:hover,
-      header nav[aria-expanded="true"] ul li:hover {
-        border: 0.0625rem solid #00b5f0;
-        border-left: none;
-        border-right: none; }
+      z-index: 1000;
+      width: 100%; }
+      header nav:target ul li,
+      header nav[aria-expanded="true"] ul li {
+        border: none; }
+        header nav:target ul li:hover,
+        header nav[aria-expanded="true"] ul li:hover {
+          border: 0.0625rem solid #00b5f0;
+          border-left: none;
+          border-right: none; }
     header nav .menu-close {
       background: #1d1e2b;
       position: absolute;
       top: 3%;
-      right: 15%; }
+      right: 5%; }
     header nav .menu-close a {
       padding: 0; }
     header nav i {
