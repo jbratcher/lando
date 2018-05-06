@@ -724,10 +724,11 @@ footer {
         
         nav {
             display: flex;
-            height: auto;
             position: relative;
             top: auto;
             right: auto;
+            width: auto;
+            height: auto;
             
             ul {
                 background: none;

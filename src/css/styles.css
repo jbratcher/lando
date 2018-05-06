@@ -412,10 +412,11 @@ footer {
       display: none; }
     header nav {
       display: flex;
-      height: auto;
       position: relative;
       top: auto;
-      right: auto; }
+      right: auto;
+      width: auto;
+      height: auto; }
       header nav ul {
         background: none;
         box-shadow: none;
