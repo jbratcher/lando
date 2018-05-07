@@ -1,6 +1,6 @@
 # Lando
 
-v1.6
+v1.7
 
 Lando is a multipurpose landing page template made with pure HTML and CSS.
 
@@ -19,6 +19,12 @@ Lando offers a lot of punch using only HTML and CSS.
 <a href="https://jbratcher.github.io/lando/">Live Demo</a>
 
 # Change Log
+
+v1.7
+
+* CSS Refactor
+* Mobile Menu full width and animated transition
+* Responsive images
 
 v1.6
 

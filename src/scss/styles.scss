@@ -768,10 +768,11 @@ footer {
     .team-boxes {
         flex-flow: row wrap;
         justify-content: space-around;
-    }
-    
-    .team-boxes .card {
-        width: 30vw;
+        
+        .card {
+            width: 30vw;
+        }
+        
     }
     
     .features .card img {
@@ -824,12 +825,12 @@ footer {
         
     }
     
-    #contact form input {
-        width: 30vw;
-    }
-    
-    #contact form button {
-        width: 30vw;
+    #contact form {
+        
+        input, button {
+            width: 30vw;
+        }
+        
     }
     
     footer {

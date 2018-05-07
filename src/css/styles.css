@@ -437,8 +437,8 @@ footer {
   .team-boxes {
     flex-flow: row wrap;
     justify-content: space-around; }
-  .team-boxes .card {
-    width: 30vw; }
+    .team-boxes .card {
+      width: 30vw; }
   .features .card img {
     width: 30vw; }
   .product .product-1 .product-text {
@@ -457,9 +457,7 @@ footer {
     justify-content: space-between; }
     header .brand {
       display: flex; }
-  #contact form input {
-    width: 30vw; }
-  #contact form button {
+  #contact form input, #contact form button {
     width: 30vw; }
   footer {
     flex-direction: row;
